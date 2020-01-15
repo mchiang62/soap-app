@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/soap-app/static/css/main.d1b05096.chunk.css",
+    "main.js": "/soap-app/static/js/main.416ab4f9.chunk.js",
+    "main.js.map": "/soap-app/static/js/main.416ab4f9.chunk.js.map",
+    "runtime-main.js": "/soap-app/static/js/runtime-main.75559643.js",
+    "runtime-main.js.map": "/soap-app/static/js/runtime-main.75559643.js.map",
+    "static/js/2.cdc2379c.chunk.js": "/soap-app/static/js/2.cdc2379c.chunk.js",
+    "static/js/2.cdc2379c.chunk.js.map": "/soap-app/static/js/2.cdc2379c.chunk.js.map",
+    "index.html": "/soap-app/index.html",
+    "precache-manifest.6b105cd7846d04b320ccf31ec23b9f4d.js": "/soap-app/precache-manifest.6b105cd7846d04b320ccf31ec23b9f4d.js",
+    "service-worker.js": "/soap-app/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/soap-app/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.cdc2379c.chunk.js.LICENSE": "/soap-app/static/js/2.cdc2379c.chunk.js.LICENSE",
+    "static/media/logo.svg": "/soap-app/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75559643.js",
+    "static/js/2.cdc2379c.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.416ab4f9.chunk.js"
+  ]
+}
