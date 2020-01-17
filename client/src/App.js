@@ -1,18 +1,26 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
+import Header from "./Components/Header/Header";
+import Wrapper from './Components/Wrapper/Wrapper';
+import Card from './Components/Card/Card'
 
 class App extends Component {
   render() {
     return (
+
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
+        <Wrapper>
+          <Header><p>Welcome to Browning's Soap</p></Header>
+          
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Awesome Soap App
         </p>
+
+        <Card>
+        </Card>
+
+        </Wrapper>
       </div>
     );
   }
