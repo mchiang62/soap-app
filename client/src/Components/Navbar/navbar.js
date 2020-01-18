@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./nav.css";
+import "./Navbar.css";
 
 function Navbar() {
     return (
@@ -35,7 +35,7 @@ function Navbar() {
                          <Link
                              to="/contact_us"
                              className={window.location.pathname === "/contact_us" ? "nav-link active" : "nav-link"}>
-                             Products
+                             Contact Us
                          </Link>
                      </li>
                  </ul>
