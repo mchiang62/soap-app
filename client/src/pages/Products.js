@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import ProductCard from "../Components/ProductCard";
+import Wrapper from "../Components/Wrapper"
 import Header from "../components/Header";
 import Navbar from "../Components/Navbar";
-import Wrapper from "../Components/Wrapper";
 import { Col, Row, Container } from "../components/Grid";
 //import "./style.css";
 
@@ -16,17 +17,19 @@ class Product extends Component{
 
     render() {
         return (
-          <Container fluid>
-            <Row>
-              <Col size="md-12">
-            
-                  <h1>
-                    {this.state.book.title} by {this.state.book.author}
-                  </h1>
-          
-              </Col>
-            </Row>
-          </Container>
+            <Wrapper>
+            <Title>Soap</Title>
+            {this.state.product.map(product => (
+              <FriendCard
+                id={product.id}
+                key={product.id}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                quantity={product.quantity}
+              />
+            ))}
+          </Wrapper>
         );
       }
     

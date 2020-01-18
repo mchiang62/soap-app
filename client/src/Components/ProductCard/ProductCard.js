@@ -1,6 +1,6 @@
 import React from "react";
 
-function FriendCard(props) {
+function ProductCard(props) {
     return (
       <div className="card">
         <div className="img-container">
@@ -29,4 +29,4 @@ function FriendCard(props) {
     );
   }
   
-  export default FriendCard;
+  export default ProductCard;
