@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import HomeCards from "../Components/HomeCards/HomeCards";
+import Products from "../pages/Products";
 
 class App extends Component {
     render() {
@@ -20,8 +21,6 @@ class App extends Component {
         
      <div className="container">
           <div className="row">
-
-
              <div className="col-4">
              <HomeCards />
             </div>
@@ -31,7 +30,8 @@ class App extends Component {
              <div className="col-4">
              <HomeCards />
             </div>
-
+      
+            <Products />
 
         </div>
      </div>

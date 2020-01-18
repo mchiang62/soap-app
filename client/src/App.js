@@ -13,6 +13,7 @@ class App extends Component {
       <Router>
        <div className="App">
        <Home />
+
        </div>
     </Router>
     );
