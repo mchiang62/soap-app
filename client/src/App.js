@@ -1,23 +1,28 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "./App.css";
-// import Header from "./Components/Header/Header";
-// import Wrapper from './Components/Wrapper/Wrapper';
-// import Card from './Components/Card/Card';
-// import Navbar from "./Components/Navbar/Navbar";
-import Home from "./pages/Home"
+import Home from './pages/Home';
+import About from './pages/About';
+import Products from './pages/Products';
+import Login from './pages/Login';
+import Contact from "./pages/Contact"
+import Navbar from "./Components/Navbar/navbar";
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-       <div className="App">
-       <Home />
+function App() {
+  return(
+    <Router>
+        <div>
+       <Navbar />
+       <Route exact path="/" component={Home} />
+       <Route exact path="/about" component={About} />
+       <Route exact path="/products" component={Products} />
+       <Route exact path="/login" component={Login} />
+       <Route exact path="/contact" component={Contact} />
        </div>
-    </Router>
-    );
-  }
+     </Router>
+  );
 }
+  
+
 
 export default App;
 

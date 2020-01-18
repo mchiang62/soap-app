@@ -1,12 +1,17 @@
-class App extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        name: '',
-        email: '',
-        message: ''
-      }
-    }
+import React from "react";
+import { Link, Route } from "react-router-dom";
+import 
+
+function Contact(props) {
+    return (
+        <div>
+           <h1>Contact Page</h1>
+           <p>
+             
+           </p>
+        </div>
+    )
+}
 
     render() {
         return(
@@ -44,6 +49,7 @@ class App extends React.Component {
     
     handleSubmit(event) {
     }
-    }
+
+
     
     export default App;
