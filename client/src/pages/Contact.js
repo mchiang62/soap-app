@@ -34,22 +34,5 @@ function Contact(props) {
            </div>
         );
      }
-
-     onNameChange(event) {
-        this.setState({name: event.target.value})
-      }
-    
-      onEmailChange(event) {
-        this.setState({email: event.target.value})
-      }
-    
-      onMessageChange(event) {
-        this.setState({message: event.target.value})
-      }
-    
-    handleSubmit(event) {
-    }
-
-
-    
+         
     export default App;
