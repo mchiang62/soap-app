@@ -25,6 +25,6 @@ var Soaps = new Schema({
 
 });
 
-var Soaps = mongoose.model("Soaps", SoapSchema);
+var Soaps = mongoose.model("Soaps", Soaps);
 
 module.exports = Soaps;
