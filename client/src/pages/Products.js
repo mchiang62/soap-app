@@ -85,6 +85,7 @@ class Products extends Component{
     render() {  
         return (
             <Wrapper>
+           
             {this.state.products.map(product => (
               <ProductCard
                 id={product.id}
@@ -96,6 +97,7 @@ class Products extends Component{
               />
             ))}
           </Wrapper>
+     
         );
       }
     

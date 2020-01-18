@@ -32,6 +32,7 @@ class App extends Component {
             </div>
       
             <Products />
+           
 
         </div>
      </div>
