@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-// in
-// import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import Wrapper from './Components/Wrapper/Wrapper';
@@ -13,7 +11,7 @@ class App extends Component {
     return (
       <Router>
        <div className="App">
-        <Navbar />
+        <Navbar></Navbar>
          {/* <Wrapper> */}
            <Header><p>Welcome to Browning's Soap</p></Header>
           
