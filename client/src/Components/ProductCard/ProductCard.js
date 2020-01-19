@@ -20,7 +20,7 @@ function ProductCard(props) {
               <strong>Quantity:</strong> {props.quantity}
             </li>
           </ul>
-          <button>Purchase this item</button>
+          <button className="purchaseButton">Purchase</button>
         </div>
       </div>
     );

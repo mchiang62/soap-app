@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ProductCard from "../Components/ProductCard/ProductCard";
 import Wrapper from "../Components/Wrapper/Wrapper";
-// import Header from "../components/Header";
-// import Navbar from "../Components/Navbar";
+import Header from "../Components/Header/Header";
+import Navbar from "../Components/Navbar/Navbar";
 // import { Col, Row, Container } from "../components/Grid";
 //import "./style.css";
 
@@ -84,8 +84,12 @@ class Products extends Component{
 
     render() {  
         return (
+        <div className ="ProductsClass">
+            <Navbar />
+            <Header />
             <Wrapper>
-           
+        <div className="container">
+            <div className="row">
             {this.state.products.map(product => (
               <ProductCard
                 id={product.id}
@@ -96,8 +100,12 @@ class Products extends Component{
                 quantity={product.quantity}
               />
             ))}
+            </div>
+            </div>
           </Wrapper>
      
+        </div>
+
         );
       }
     

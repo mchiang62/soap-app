@@ -20,17 +20,27 @@
   }
   
   .card > .content {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    color: black;
   }
   
   .card > .content > ul {
     list-style-type: none;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right:10%;
   }
   
   .card > .content > ul > li {
-    margin-top: 18px;
+    margin-top: 10px;
   }
   
-  
+  .purchaseButton{
+    position:relative;
+    margin-bottom: 10px;
+    margin-top:5px;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+  }
