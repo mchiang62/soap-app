@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// If deployed, use the deployed database. Otherwise use the local mongoClickyGame Database
+// If deployed, use the deployed database. Otherwise use the local mongoSoap Database
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoSoap";
 
 // Connect to the Mongo DB
