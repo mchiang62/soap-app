@@ -31,7 +31,8 @@ class App extends Component {
             <div className="col-4">
               <HomeCards />
             </div>
-
+  
+           
 
           </div>
         </div>
