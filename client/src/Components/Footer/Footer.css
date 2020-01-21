@@ -2,5 +2,11 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 130px;
+    border-top: #78c2ad;
+    border-top-width: 5px;
+    background-color: #f7f7f9;
+}
+
+.title {
+    margin-top: 15px;
 }
