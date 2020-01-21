@@ -3,7 +3,7 @@ const db = require("../models");
 
 console.log(process.env.MONGODB_URI)
 mongoose.connect(
-    process.git env.MONGDB_URI || "mongodb://localhost:27017/Soap"
+    process.env.MONGDB_URI || "mongodb://localhost:27017/Soap"
 );
 
 const soapSeed = [
