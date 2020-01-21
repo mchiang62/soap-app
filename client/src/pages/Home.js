@@ -2,53 +2,50 @@ import React, { Component } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import HomeCards from "../Components/HomeCards/HomeCards";
+import Footer from "../Components/Footer/Footer";
 
 class App extends Component {
-    render() {
-      return (
+  render() {
+    return (
+      <div className="App">
+        <Navbar />
 
-         <div className="App">
-          <Navbar />
-        
-             <Header><p>Welcome to Browning's Soap</p></Header>
-            
-            
-           <p className="App-intro">
-             Awesome Soap App
+        <Header><p>Welcome to Browning's Soap</p></Header>
+
+
+        <p className="App-intro">
+          Awesome Soap App
            </p>
 
-        
-     <div className="container">
+
+        <div className="container">
           <div className="row">
 
 
-             <div className="col-4">
-             <HomeCards />
+            <div className="col-4">
+              <HomeCards />
             </div>
-             <div className="col-4">
-             <HomeCards />
+            <div className="col-4">
+              <HomeCards />
             </div>
-             <div className="col-4">
-             <HomeCards />
+            <div className="col-4">
+              <HomeCards />
             </div>
 
 
+          </div>
         </div>
-     </div>
+        <Footer />
+      </div>
 
-           
-  
-  
-           
-         </div>
-        
+      
         
         
       );
-    }
   }
-  
-  export default App;
+}
+
+export default App;
 
 
 //   add jumbotron to header
