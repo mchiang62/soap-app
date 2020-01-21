@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 function Navbar() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light border-primary">
         <Link className="navbar-brand" to="/">
                  Brownings Soap
              </Link>
