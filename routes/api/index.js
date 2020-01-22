@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const soapRoutes = require("./soaps");
 
-// Book routes
+
+// DB routes
 router.use("/soaps", soapRoutes);
 
 module.exports = router;

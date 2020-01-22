@@ -21,8 +21,11 @@ var Soaps = new Schema({
     image: {
         type: String,
         required: true
+    },
+    inCart: {
+        type: Boolean,
+        required: true
     }
-
 });
 
 var Soaps = mongoose.model("Soaps", Soaps);
