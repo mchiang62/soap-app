@@ -43,14 +43,24 @@ function Navbar() {
                 <ul class="list-inline">
                     <li class="list-inline-item">Welcome,</li>
                     <li class="list-inline-item">
-                        <a href="/users/register" class="userRegister">Register</a>
+                        <Link 
+                            to="/register" 
+                            className={window.location.pathname === "register"}>
+                            Register    
+                        </Link>
                     </li>
                     <li class="list-inline-item">
-                        <a href="/users/login" class="userLogin">Login</a>
+                        <Link 
+                            to="/login" 
+                            className={window.location.pathname === "/login"}>
+                            Login    
+                        </Link>
+                    </li>
+                    <li class="list-inline-item">
+                        <button className="btn btn-primary my-2 my-sm-0" href="/cart" type="submit">Shopping Cart</button>
                     </li>
                 </ul>
-
-                {/* <button className="btn btn-primary my-2 my-sm-0" href="/users/login" type="submit">Login</button> */}
+                
             </div>
         </nav>
     );
