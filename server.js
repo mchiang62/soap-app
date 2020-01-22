@@ -1,9 +1,10 @@
-require("dotenv").config;
+require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const routes = require("./routes");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -14,15 +15,16 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // If deployed, use the deployed database. Otherwise use the local mongoSoap Database
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoSoap";
-
+const MONGODB_URI = process.env.MONGODB_URI
 // Connect to the Mongo DB
 mongoose.connect(MONGODB_URI); 
 
 // Define API routes here
+app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

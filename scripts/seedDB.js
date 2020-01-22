@@ -1,10 +1,10 @@
+require('dotenv').config()
 const mongoose = require("mongoose");
 const db = require("../models");
 
 console.log(process.env.MONGODB_URI)
 mongoose.connect(
-    process.env.MONGDB_URI || "mongodb://localhost:27017/Soap"
-);
+    process.env.MONGODB_URI);
 
 const soapSeed = [
     {
