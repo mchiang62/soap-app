@@ -1,5 +1,11 @@
 import React from "react";
 import "./ProductCard.css";
+import PurchaseBtn from "../PurchaseButton/PurchaseButton"
+
+function Purchase(e){
+  e.preventDefault();
+  alert("This worked");
+};
 
 
 function ProductCard(props) {
@@ -20,7 +26,7 @@ function ProductCard(props) {
               <strong>Quantity:</strong> {props.quantity}
             </li>
           </ul>
-          <button className="purchaseButton">Purchase</button>
+          <PurchaseBtn onClick={Purchase} />
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const soapsController = require("../../controllers/soapsController");
 
-// Matches with "/api/books"
+// Matches with "/api/soaps"?
 router.route("/")
   .get(soapsController.findAll)
   .post(soapsController.create);
