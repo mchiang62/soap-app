@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProductCard.css";
 
 
 function ProductCard(props) {
@@ -13,19 +14,14 @@ function ProductCard(props) {
               <strong>Name:</strong> {props.name}
             </li>
             <li>
-              <strong>Description:</strong> {props.description}
-            </li>
-            <li>
               <strong>Price:</strong> {props.price}
             </li>
             <li>
               <strong>Quantity:</strong> {props.quantity}
             </li>
           </ul>
+          <button className="purchaseButton">Purchase</button>
         </div>
-        {/* <span onClick={() => props.removeFriend(props.id)} className="remove">
-          𝘅
-        </span> */}
       </div>
     );
   }
