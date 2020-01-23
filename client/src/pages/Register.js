@@ -8,7 +8,7 @@ class Register extends Component {
                 <div class="row mt-5">
                     <div class="col-md-6 m-auto align-items-stretch">
                         <div class="card card-body">
-                            <img src="https://i.imgur.com/CYtEeyjs.jpg" class="card-img" alt="soap-logo">
+                            <img src="https://i.imgur.com/CYtEeyjs.jpg" class="card-img" alt="soap-logo" style=""></img>
                             <h1 class="text-center mb-3">
                                 Register
                         </h1>
