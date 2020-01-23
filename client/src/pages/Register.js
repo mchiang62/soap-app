@@ -9,7 +9,9 @@ class Register extends Component {
         return (
             <div className="App">
                 <Navbar />
-                <RegisterCard />
+                <div className="Register">
+                    <RegisterCard />
+                </div>
                 <Footer />
             </div>
         );
