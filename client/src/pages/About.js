@@ -11,7 +11,7 @@ class About extends Component {
                 <Header><p>About Us</p></Header>
                 <div className="row">
                     <div className="col-md-12">
-                        <div class="card border-light mb-3 w-75">
+                        <div class="card mb-3 w-75">
                             <div class="card-header">
                                 The Browning's
                             </div>
