@@ -7,12 +7,12 @@ function RegisterCard() {
             <div className="col-md-12">
                 <div className="card">
                     <div className="logo">
-                        <img src="https://i.imgur.com/CYtEeyjs.jpg?1" class="card-img" alt="soap-logo"></img>
+                        <img src="https://i.imgur.com/CYtEeyjt.jpg?1" class="card-img" alt="soap-logo"></img>
                     </div>
                     <h3 class="text-center mb-3">
                         Register
                         </h3>
-                    <div className="card-block">
+                    <div className="card-body">
                             <form action="/users/register" method="POST">
                                 <div className="form-group">
                                     <label for="name">Name</label>
