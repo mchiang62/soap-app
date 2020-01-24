@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 
 
 class App extends Component {
+  render() {
       return (
       <Router>
        <div>
