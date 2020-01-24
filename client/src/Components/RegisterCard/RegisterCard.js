@@ -5,9 +5,9 @@ function RegisterCard() {
     return (
         <div className="row mt-5">
             <div className="col-md-12">
-                <div className="card">
+                <div className="card register-card shadow-lg">
                     <div className="logo">
-                        <img src="https://i.imgur.com/CYtEeyjt.jpg?1" class="card-img" alt="soap-logo"></img>
+                        <img src="https://live.staticflickr.com/65535/49435877052_170647b629_o.png" className="register-card-img" alt="soap-logo"></img>
                     </div>
                     <h3 class="text-center mb-3">
                         Register
