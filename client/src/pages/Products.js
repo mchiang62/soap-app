@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-
-
+import ProductCard from "../Components/ProductCard/ProductCard";
+import Wrapper from "../Components/Wrapper/Wrapper";
+import Header from "../Components/Header/Header";
+import Navbar from "../Components/Navbar/Navbar";
+// import { Col, Row, Container } from "../components/Grid";
 //import "./style.css";
-
 const soapSeed = [
     {
         name: "Apple Crisp",
@@ -46,7 +48,6 @@ const soapSeed = [
         image: "https://i.imgur.com/33BCneS.jpg",
         quantity: 10
     },
-  
     {
         name: "Pumpkin Spice",
         price: 4,
@@ -71,33 +72,34 @@ const soapSeed = [
         image: "https://i.imgur.com/3EsCPTr.jpg",
         quantity: 10
     }
-
 ];
-
 class Products extends Component{
     state = {
         products: soapSeed
     };
-
     render() {  
         return (
-            // <Wrapper>
-            {/* <Title>Soap</Title> */}
-            // {this.state.product.map(product => (
-            //   <div
-            //     id={product.id}
-            //     key={product.id}
-            //     name={product.name}
-            //     description={product.description}
-            //     price={product.price}
-            //     quantity={product.quantity}
-            //  > </div> 
-            // ))}
-          // </Wrapper>
+        <div className ="ProductsClass">
+            <Navbar />
+            <Header />
+            <Wrapper>
+        <div className="container">
+            <div className="row">
+            {this.state.products.map(product => (
+              <ProductCard
+                id={product.id}
+                key={product.id}
+                name={product.name}
+                image={product.image}
+                price={product.price}
+                quantity={product.quantity}
+              />
+            ))}
+            </div>
+            </div>
+          </Wrapper>
+        </div>
         );
       }
-    
 };
-
-
 export default Products;
