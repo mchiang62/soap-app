@@ -6,8 +6,9 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/">
-                Brownings Soap
+                <img src="https://i.imgur.com/CYtEeyjs.jpg?1" alt="banner"></img>
              </Link>
+
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
