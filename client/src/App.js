@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
+import React, {Component} from "react"
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Products from "./pages/Products";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
@@ -11,13 +11,13 @@ import Register from "./pages/Register";
 
 
 class App extends Component {
-  render() {
-    return (
+      return (
       <Router>
-       <div className="App">
-
-       <Switch>
+       <div>
+         {/* <Navbar /> */}
+          <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/cart" component={Cart} />
           <Route exact path="/home" component={Home} />
           <Route path="/about_us" component={About} />
           <Route path="/contact_us" component={Contact} />
@@ -28,12 +28,10 @@ class App extends Component {
         </Switch>
 
        </div>
-    </Router>
-    );
-  }
+     </Router>
+  );
 }
+  
+
 
 export default App;
-
-
-// add routes to this page
