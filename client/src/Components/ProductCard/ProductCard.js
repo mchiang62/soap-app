@@ -4,7 +4,7 @@ import PurchaseBtn from "../PurchaseButton/PurchaseButton"
 
 function Purchase(e){
   e.preventDefault();
-  alert("This worked");
+  // alert("This worked");
 };
 
 

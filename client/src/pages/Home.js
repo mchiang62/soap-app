@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import HomeCards from "../Components/HomeCards/HomeCards";
 import Footer from "../Components/Footer/Footer";
+// import Modals from "../Components/Modals/Modals"
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
         <Navbar />
 
         <Header><p>Welcome to Browning's Soap</p></Header>
-
+     
 
         <p className="App-intro">
           Awesome Soap App

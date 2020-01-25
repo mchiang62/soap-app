@@ -11,7 +11,6 @@ class Cart extends Component {
         
         
             
-            
            <p className="App-intro">
              Awesome Soap App
            </p>
