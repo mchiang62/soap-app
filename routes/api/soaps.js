@@ -6,7 +6,7 @@ router.route("/")
   .get(soapsController.findAll)
   .post(soapsController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/soaps/:id"
 router
   .route("/:id")
   .get(soapsController.findById)
