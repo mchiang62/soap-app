@@ -1,0 +1,38 @@
+/* body {
+    background-color: #000;  
+  }
+  
+.img {
+    height: 100vh;
+  }
+  .bs {
+      position: absolute;
+      color: antiquewhite;
+      font-size: 4.7rem;
+      transform-origin: top center;
+      top: 300px;
+      transform: rotate(90deg);
+
+  }
+
+  .np {
+      position: absolute;
+      font-size: 4rem;
+      color: blanchedalmond;
+      top: 10px;
+      text-align: center;
+      width: 100%;
+      font-style: oblique;
+      filter: drop-shadow(6px 10px 4px #443fd1);
+  }
+
+  .nc {
+    position: absolute;
+    font-size: 4rem;
+    color: blanchedalmond;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-style: oblique;
+    filter: drop-shadow(6px 10px 4px #443fd1);
+} */

@@ -6,8 +6,9 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/">
-                Brownings Soap
-             </Link>
+                <img src="https://live.staticflickr.com/65535/49435877052_170647b629_o.png" alt="banner" className="brand-logo"></img>
+            </Link>
+
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -16,6 +17,7 @@ function Navbar() {
                     <li className="nav-item">
                         <Link to="/" className={window.location.pathname === "/" || window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>Home
                          </Link>
+
                     </li>
                     <li className="nav-item">
                         <Link
@@ -43,24 +45,26 @@ function Navbar() {
                 <ul class="list-inline">
                     <li class="list-inline-item">Welcome,</li>
                     <li class="list-inline-item">
-                        <Link 
-                            to="/register" 
+                        <Link
+                            to="/register"
                             className={window.location.pathname === "register"}>
-                            Register    
+                            Register
                         </Link>
                     </li>
                     <li class="list-inline-item">
-                        <Link 
-                            to="/login" 
+                        <Link
+                            to="/login"
                             className={window.location.pathname === "/login"}>
-                            Login    
+                            Login
                         </Link>
                     </li>
                     <li class="list-inline-item">
-                        <button className="btn btn-primary my-2 my-sm-0" href="/Cart" type="submit">Shopping Cart</button>
+                        <Link to="/cart" className={window.location.pathname === "/cart"}>
+                            <button className="btn btn-primary my-2 my-sm-0" href="/cart" type="submit">Shopping Cart</button>
+                        </Link>
                     </li>
                 </ul>
-                
+
             </div>
         </nav>
     );

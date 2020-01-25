@@ -1,0 +1,14 @@
+.register-card-img {
+    width: auto;
+    height: 100px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.register-card {
+  height: auto;
+  margin: 0 auto;
+  border: thin solid #78c2ad;
+}

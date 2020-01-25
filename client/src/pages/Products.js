@@ -5,7 +5,6 @@ import Header from "../Components/Header/Header";
 import Navbar from "../Components/Navbar/Navbar";
 // import { Col, Row, Container } from "../components/Grid";
 //import "./style.css";
-
 const soapSeed = [
     {
         name: "Apple Crisp",
@@ -49,7 +48,6 @@ const soapSeed = [
         image: "https://i.imgur.com/33BCneS.jpg",
         quantity: 10
     },
-  
     {
         name: "Pumpkin Spice",
         price: 4,
@@ -74,14 +72,11 @@ const soapSeed = [
         image: "https://i.imgur.com/3EsCPTr.jpg",
         quantity: 10
     }
-
 ];
-
 class Products extends Component{
     state = {
         products: soapSeed
     };
-
     render() {  
         return (
         <div className ="ProductsClass">
@@ -103,13 +98,8 @@ class Products extends Component{
             </div>
             </div>
           </Wrapper>
-     
         </div>
-
         );
       }
-    
 };
-
-
 export default Products;
