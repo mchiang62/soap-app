@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var Photos = new Schema({
+var Photo = new Schema({
     name: {
         type: String,
         trim: true,
@@ -15,6 +15,6 @@ var Photos = new Schema({
 
 });
 
-var Photos = mongoose.model("Photos", Photos);
+var Photo = mongoose.model("Photo", Photo);
 
-module.exports = Photos;
+module.exports = Photo;
