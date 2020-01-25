@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Navbar from "../Components/Navbar/Navbar";
-<<<<<<< HEAD
 import Header from "../Components/Header/Header";
 import Cart from "../Components/ShoppingCart/Cart";
 
@@ -101,46 +100,3 @@ class ShopCart extends Component {
 }
 
 export default ShopCart;
-=======
-
-
-class Cart extends Component {
-    render() {
-      return (
-
-         <div className="App">
-          <Navbar />
-        
-        
-            
-           <p className="App-intro">
-             Awesome Soap App
-           </p>
-
-        
-     <div className="container">
-          <div className="row">
-
-
-
-
-
-        </div>
-     </div>
-
-           
-  
-  
-           
-         </div>
-        
-        
-        
-      );
-    }
-  }
-  
-  export default Cart;
-
-
->>>>>>> d274852d5dfbd1c273ba3ec8286e6ac3672572b8
