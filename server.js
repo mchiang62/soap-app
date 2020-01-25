@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 // If deployed, use the deployed database. Otherwise use the local mongoSoap Database
 const MONGODB_URI = process.env.MONGODB_URI
 // Connect to the Mongo DB
-mongoose.connect(MONGODB_URI); 
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true }); 
 
 // Define API routes here
 app.use(routes);
