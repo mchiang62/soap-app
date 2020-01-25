@@ -57,7 +57,7 @@ function Navbar() {
                         </Link>
                     </li>
                     <li class="list-inline-item">
-                        <button className="btn btn-primary my-2 my-sm-0" href="/cart" type="submit">Shopping Cart</button>
+                        <button className="btn btn-primary my-2 my-sm-0" href="/Cart" type="submit">Shopping Cart</button>
                     </li>
                 </ul>
                 

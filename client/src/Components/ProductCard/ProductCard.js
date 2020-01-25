@@ -23,7 +23,7 @@ function ProductCard(props) {
               <strong>Price:</strong> {props.price}
             </li>
             <li>
-              <strong>Quantity:</strong> {props.quantity}
+              <strong>In Stock:</strong> {props.quantity}
             </li>
           </ul>
           <PurchaseBtn onClick={Purchase} />
