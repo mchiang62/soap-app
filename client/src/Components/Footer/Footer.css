@@ -2,11 +2,11 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    border-top: #78c2ad;
-    border-top-width: 5px;
+    border-top: thin solid #78c2ad;
     background-color: #f7f7f9;
 }
 
 .title {
     margin-top: 15px;
+    text-align: center;
 }

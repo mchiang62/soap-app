@@ -1,0 +1,10 @@
+.login-card {
+    height: auto;
+    border: thin solid #78c2ad;
+    margin: 0 auto;
+}
+
+.login-card-img {
+    height: 100px;
+    width: auto;
+}

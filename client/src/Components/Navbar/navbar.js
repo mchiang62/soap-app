@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link className="navbar-brand" to="/">
-                <img src="https://i.imgur.com/CYtEeyjm.jpg" alt="banner"></img>
+                <img src="https://live.staticflickr.com/65535/49435877052_170647b629_o.png" alt="banner" className="brand-logo"></img>
             </Link>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
