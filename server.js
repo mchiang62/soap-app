@@ -2,15 +2,19 @@ require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const routes = require("./routes");
 const flash = require("connect-flash");
 const session = require("express-session");
+const passport = reruire("passport");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// Passport Config
+require("./config/passport")(passport);
 
 // Express Session
 app.use(session({
@@ -19,6 +23,10 @@ app.use(session({
   saveUninitialized: true,
 }));
 
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
 // Connect flash
 app.use(flash());
 
@@ -26,6 +34,7 @@ app.use(flash());
 app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
   res.locals.error_msg = req.flash("error_msg");
+  res.locals.error = req.flash("error");
   next();
 })
 
