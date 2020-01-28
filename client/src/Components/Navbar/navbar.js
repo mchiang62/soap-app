@@ -43,7 +43,7 @@ function Navbar() {
                 </ul>
 
                 <ul class="list-inline">
-                    <li class="list-inline-item">Welcome,</li>
+                    <li class="list-inline-item">Welcome, {props.user.name}</li>
                     <li class="list-inline-item">
                         <Link
                             to="/register"
