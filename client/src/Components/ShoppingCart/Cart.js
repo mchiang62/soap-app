@@ -3,16 +3,18 @@ import "./Cart.css";
 
 function plus(e){
         e.preventDefault();
-        var input = e.target.closest('div');
-        var value = parseInt(input);
+        var sum = this;
+    		var input = sum.closest("div").find("input");
+    		var value = parseInt(input.val());
 
-        if (value < 100) {
-          value = value + 1;
-        } else {
-            value =100;
-        }
-        input.val(value);
-    };  
+    		if (value < 100) {
+      		value = value + 1;
+    		} else {
+    			value =100;
+    		}
+
+    		input.val(value);
+    	}; 
 
 
 function Cart (props) {
