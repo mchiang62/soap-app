@@ -5,4 +5,6 @@ export default {
     getSoaps: function() {
         return axios.get("/api/soaps");
     }
+
+    
 };
