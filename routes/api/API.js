@@ -4,5 +4,9 @@ import axios from "axios";
 export default {
     getSoaps: function() {
         return axios.get("/api/soaps");
-    }
+    },
+    // Saves a user to the database
+    saveUser: function(userRegister) {
+    return axios.post("/api/user", userRegister);
+  }
 };

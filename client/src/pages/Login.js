@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import LoginCard from "../Components/LoginCard/LoginCard";
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
 
 
 class Login extends Component {
     constructor() {
+        state = {
+            
+        }
     }
     render() {
         return (
