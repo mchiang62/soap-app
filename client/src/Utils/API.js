@@ -5,7 +5,7 @@ export default {
     getSoaps: function() {
         return axios.get("/api/soaps");
     },
-    saveUser: function(){
+    saveUser: function(userData){
         return axios.post("/api/users", userData);
     }
     // getSoap: function(){

@@ -33,7 +33,7 @@ class RegisterCard extends Component {
                             Register
                         </h3>
                         <div className="card-body">
-                            <form action="/users/register" method="POST">
+                            <form action="/api/users" method="POST">
                                 <div className="form-group">
                                     <label for="name">Name</label>
                                     <input
@@ -84,7 +84,7 @@ class RegisterCard extends Component {
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">
                                     Register
-                            </button>
+                                </button>
                             </form>
                             <p className="lead mt-4">Have An Account? <a href="/login">Login</a></p>
                         </div>
