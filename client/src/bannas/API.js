@@ -1,10 +1,13 @@
-import axios from "axios";
+import axios from "./node_modules/axios";
 
 //get all products
 export default {
     getSoaps: function() {
         return axios.get("/api/soaps");
     },
+    saveUser: function(){
+        return axios.post("/api/users", userData);
+    }
     // getSoap: function(){
     //     return axios.get("/api/soaps/" + id);
     // },
@@ -16,6 +19,5 @@ export default {
     // },
     // getPhoto: function() {
     //     return axios.get("/api/photo" + id);
-    // }
-    
+    // } 
 };

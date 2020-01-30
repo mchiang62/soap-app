@@ -33,7 +33,7 @@ class RegisterCard extends Component {
                             Register
                         </h3>
                         <div className="card-body">
-                            <form action="/register" method="POST">
+                            <form action="/users/register" method="POST">
                                 <div className="form-group">
                                     <label for="name">Name</label>
                                     <input
