@@ -42,9 +42,9 @@ function Navbar() {
                     </li>
                 </ul>
 
-                <ul class="list-inline">
-                    <li class="list-inline-item">Welcome, {props.user.name}</li>
-                    <li class="list-inline-item">
+                <ul className="list-inline">
+                    <li className="list-inline-item" id="welcome-text">Welcome, </li>
+                    <li className="list-inline-item">
                         <Link
                             to="/register"
                             className={window.location.pathname === "register"}>

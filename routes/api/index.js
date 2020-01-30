@@ -7,11 +7,8 @@ const { ensureAuthenticated } = require("../../config/auth");
 router.use("/soaps", soapRoutes);
 router.use("/users", userRoutes);
 
-// Home page
-router.get("/", (req, res) => res.render("Home"));
-
 // Admin page
-router.get("/admin", ensureAuthenticated, (req, res) => res.render("Admin"){
+router.get("/admin", ensureAuthenticated, (req, res) => res.render("Admin") {
     name: req.user.name
 });
 
