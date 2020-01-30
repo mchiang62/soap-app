@@ -1,4 +1,5 @@
 module.exports = {
     Soap: require("./Soap"),
-    User: require("./User")
+    User: require("./User"),
+    Photo: require("./Photo")
 };
