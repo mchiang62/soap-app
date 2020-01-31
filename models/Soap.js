@@ -24,6 +24,7 @@ var Soaps = new Schema({
     },
     inCart: {
         type: Boolean,
+        default: false,
         required: true
     }
 });

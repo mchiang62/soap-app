@@ -14,6 +14,7 @@ import items  from './Shopping/static-data';
 import './App.css';
 import CartPage from './Shopping/CartPage';
 //import { checkPropTypes } from 'prop-types';
+import Admin from "./pages/Admin";
 
 const summarizeCart = cart => {
   const groupedItems = cart.reduce((summary, item) =>{

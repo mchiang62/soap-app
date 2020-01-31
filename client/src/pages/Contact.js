@@ -13,7 +13,7 @@ function Contact() {
                 browsing through our selection of fine
                 soaps. We hope you come back again soon.
             </div>
-            <img src={usflag} class="mx-auto d-block img"   /> 
+            <img src={usflag} alt="merica" className="mx-auto d-block img"   /> 
 
             </div></a>
     ) 
