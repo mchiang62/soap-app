@@ -2,19 +2,26 @@ import React, { Component } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
+import Wrapper from "../Components/Wrapper/Wrapper";
 import API from "../Utils/API";
 import {Input, FormBtn} from "../Components/AddSoapForm";
+import AdminProductCard from "../Components/AdminProductCard/AdminProductCard";
 
 
 class Admin extends Component {
-
-    state = {
-        Soaps : [],
-        name: "",
-        price: "",
-        quantity: "",
-        image: ""
+    constructor(props){
+        super(props);
+        this.deleteSoap = this.deleteSoap.bind(this)
+        
+        this.state = {
+            products : [],
+            name: "",
+            price: "",
+            quantity: "",
+            image: ""
+        }
     }
+    
 
     componentDidMount() {
         this.loadSoaps();
@@ -23,12 +30,13 @@ class Admin extends Component {
     loadSoaps = () => {
         API.getSoaps()
         .then(res =>
-            this.setState({ Soaps: res.data, name: "", price: "", quantity: "", image: ""})
+            this.setState({products:res.data})
             )
             .catch(err => console.log(err));
     };
 
     deleteSoap = id => {
+        console.log(id)
         API.deleteSoap(id)
             .then(res => this.loadSoaps())
             .catch(err => console.log(err));
@@ -62,7 +70,7 @@ class Admin extends Component {
                 <Navbar />
 
                 <Header><p>Welcome, Admin. Add new soaps to the database below.</p></Header>
-
+                <Wrapper>
                 <form>
                     <Input
                         value={this.state.name}
@@ -95,9 +103,25 @@ class Admin extends Component {
                         Add New Soap
                     </FormBtn>
                 </form>
+                <div className="container">
+                    <div className="row">
+                        {this.state.products.map(product => (
+                            <AdminProductCard
+                                deleteSoap={this.deleteSoap}
+                                id={product.id}
+                                key={product.id}
+                                name={product.name}
+                                image={product.image}
+                                price={product.price}
+                                quantity={product.quantity}
+                                />
+                        ))}
+                    </div>
+                </div>
+
             
-            
-            <Footer/>
+            </Wrapper>
+
             </div>
 
 

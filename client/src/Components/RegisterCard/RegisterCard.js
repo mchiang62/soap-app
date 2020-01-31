@@ -28,7 +28,7 @@ class RegisterCard extends Component {
 		event.preventDefault()
 
 		//request to server to add a new username/password
-		axios.post('/users/', {
+		axios.post('/users/registerUser', {
 			name: this.state.name,
             email: this.state.email,
             password: this.state.password,
@@ -57,11 +57,11 @@ class RegisterCard extends Component {
         return (
             <div className="row mt-5">
                 <div className="col-md-12">
-                    <div className="card register-card shadow-lg">
+                    <div className="card shadow-lg" id="register-card">
                         <div className="logo">
                             <img src="https://live.staticflickr.com/65535/49435877052_170647b629_o.png" className="register-card-img" alt="soap-logo"></img>
                         </div>
-                        <h3 class="text-center mb-3">
+                        <h3 className="text-center mb-3">
                             Register
                         </h3>
                         <div className="card-body">
@@ -72,7 +72,7 @@ class RegisterCard extends Component {
                                         type="name"
                                         id="name"
                                         name="name"
-                                        class="form-control"
+                                        className="form-control"
                                         placeholder="Enter Name"
                                         value={this.state.name}
                                         onChange={this.handleChange}
@@ -84,7 +84,7 @@ class RegisterCard extends Component {
                                         type="email"
                                         id="email"
                                         name="email"
-                                        class="form-control"
+                                        className="form-control"
                                         placeholder="Enter Email"
                                         value={this.state.email}
                                         onChange={this.handleChange}
@@ -96,7 +96,7 @@ class RegisterCard extends Component {
                                         type="password"
                                         id="password"
                                         name="password"
-                                        class="form-control"
+                                        className="form-control"
                                         placeholder="Create Password"
                                         value={this.state.password}
                                         onChange={this.handleChange}
@@ -108,13 +108,13 @@ class RegisterCard extends Component {
                                         type="password"
                                         id="password2"
                                         name="password2"
-                                        class="form-control"
+                                        className="form-control"
                                         placeholder="Confirm Password"
                                         value={this.state.password2}
                                         onChange={this.handleChange}
                                     />
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block" onClick={this.handleSubmit}>
+                                <button type="submit" className="btn btn-primary btn-block" onClick={this.handleSubmit}>
                                     Register
                                 </button>
                             </form>

@@ -51,14 +51,14 @@ function Navbar() {
                             Register
                         </Link>
                     </li>
-                    <li class="list-inline-item">
+                    <li className="list-inline-item">
                         <Link
                             to="/login"
                             className={window.location.pathname === "/login"}>
                             Login
                         </Link>
                     </li>
-                    <li class="list-inline-item">
+                    <li className="list-inline-item">
                         <Link to="/cart" className={window.location.pathname === "/cart"}>
                             <button className="btn btn-primary my-2 my-sm-0" href="/cart" type="submit">Shopping Cart</button>
                         </Link>
