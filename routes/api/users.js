@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const passport = require("passport");
 
 // User model
-const User = require("../models/User");
+const User = require("../../models/User");
 
 // Login Page
 router.get("/login", (req, res) => res.send("Login"));
@@ -13,8 +13,9 @@ router.get("/login", (req, res) => res.send("Login"));
 router.get("/register", (req, res) => res.send("Register"));
 
 // Register Handle
-router.post("/register", (req, res) => {
+router.post("/", (req, res) => {
     const { name, email, password, password2 } = req.body;
+    console.log(req.body)
     let errors = [];
 
     // Check for required fields
@@ -70,6 +71,7 @@ router.post("/register", (req, res) => {
 
                             // Save user
                             newUser.save()
+                            
                                 .then(user => {
                                     req.flash("success_msg", "You are now registered and can log in")
                                     res.redirect("/users/login");

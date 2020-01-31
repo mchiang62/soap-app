@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./RegisterCard.css";
+import axios from "axios";
 
 class RegisterCard extends Component {
     constructor() {
@@ -11,7 +12,7 @@ class RegisterCard extends Component {
             password2: ""
         }
 
-        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -20,6 +21,37 @@ class RegisterCard extends Component {
             [event.target.name]: event.target.value
         })
     }
+
+    handleSubmit(event) {
+		console.log('sign-up handleSubmit,name: ')
+		// console.log(this.state.name)
+		event.preventDefault()
+
+		//request to server to add a new username/password
+		axios.post('/users/', {
+			name: this.state.name,
+            email: this.state.email,
+            password: this.state.password,
+            password2: this.state.password2,
+		})
+        .then(response => {
+				if (!response.data.errmsg) {
+                    console.log('successful signup')
+                    // console.log(response.data)
+					this.setState({ //redirect to login page
+						redirectTo: '/login'
+					})
+				} else {
+					console.log('username already taken')
+				}
+			}).catch(error => {
+				console.log('signup error: ')
+				console.log(error)
+
+			})
+	}
+
+
 
     render() {
         return (
@@ -33,7 +65,7 @@ class RegisterCard extends Component {
                             Register
                         </h3>
                         <div className="card-body">
-                            <form action="/api/users" method="POST">
+                            <form>
                                 <div className="form-group">
                                     <label for="name">Name</label>
                                     <input
@@ -82,7 +114,7 @@ class RegisterCard extends Component {
                                         onChange={this.handleChange}
                                     />
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block">
+                                <button type="submit" class="btn btn-primary btn-block" onClick={this.handleSubmit}>
                                     Register
                                 </button>
                             </form>

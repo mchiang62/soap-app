@@ -7,7 +7,7 @@ const app = express();
 const routes = require("./routes");
 const flash = require("connect-flash");
 const session = require("express-session");
-const passport = reruire("passport");
+const passport = require("passport");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

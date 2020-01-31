@@ -8,9 +8,9 @@ router.use("/soaps", soapRoutes);
 router.use("/users", userRoutes);
 
 // Admin page
-router.get("/admin", ensureAuthenticated, (req, res) => res.render("Admin") {
-    name: req.user.name
-});
+// router.get("/admin", ensureAuthenticated, (req, res) => res.render("Admin") {
+//     name: req.user.name
+// });
 
 
 module.exports = router;
