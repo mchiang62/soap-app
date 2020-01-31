@@ -5,6 +5,9 @@ export default {
     getSoaps: function() {
         return axios.get("/api/soaps");
     },
+    saveUser: function(userData){
+        return axios.post("/api/users", userData);
+    },  
     getSoap: function(id){
         return axios.get("/api/soaps/" + id);
     },
@@ -17,5 +20,4 @@ export default {
     getPhoto: function(id) {
         return axios.get("/api/photo" + id);
     }
-    
 };

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import LoginCard from "../Components/LoginCard/LoginCard";
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
+import LoginCard from "../Components/LoginCard/LoginCard";
 
 
 class Login extends Component {

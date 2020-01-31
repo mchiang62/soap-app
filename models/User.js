@@ -23,11 +23,6 @@ const UserSchema = new mongoose.Schema({
             "Password should be longer."
           ]
     },
-    password2: {
-        type: String,
-        required: true,
-        trim: true
-    },
     date: {
         type: Date,
         default: Date.now
