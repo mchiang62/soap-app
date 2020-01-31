@@ -1,6 +1,6 @@
 import React from "react";
 import usflag from "../Images/usflag.jpeg";
-import "./contact.css";
+//import "./contact.css";
 
 
 function Contact() {
