@@ -5,6 +5,7 @@ import "./AdminProductCard.css";
 
 
 function ProductCard(props) {
+  console.log({props} )
     return (
       <div className="card">
         <div className="img-container">
@@ -22,6 +23,9 @@ function ProductCard(props) {
               <strong>Quantity:</strong> {props.quantity}
             </li>
           </ul>
+            <li>
+              <strong>Id: </strong> {props.id}
+            </li>
         </div>
         <span onClick={() => props.deleteSoap(props.id)} className="remove">
         𝘅
