@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
-// const passport = require("passport");
-const passport = require("../../config/passport")
+const passport = require("passport");
+// const passport = require("../../config/passport")
 
 // User model
 const User = require("../../models/User");
@@ -23,16 +23,19 @@ router.post("/registerUser", (req, res) => {
     // Check for required fields
     if (!name || !email || !password || !password2) {
         errors.push({ msg: "Please fill in all fields" })
+        console.log(errors);
     }
 
     // Check to see if passwords match
     if (password !== password2) {
         errors.push({ msg: "Passwords do not match." })
+        console.log(errors);
     }
 
     // Check password length is at least 6 characters long
     if (password.length < 6) {
         errors.push({ msg: "Password needs to be at least 6 characters" })
+        console.log(errors);
     }
 
     if (errors.length > 0) {

@@ -9,7 +9,8 @@ class RegisterCard extends Component {
             name: "",
             email: "",
             password: "",
-            password2: ""
+            password2: "",
+            redirectTo: null
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,7 +29,7 @@ class RegisterCard extends Component {
 		event.preventDefault()
 
 		//request to server to add a new username/password
-		axios.post('/users/registerUser', {
+		axios.post('/api/users/registerUser', {
 			name: this.state.name,
             email: this.state.email,
             password: this.state.password,
@@ -39,7 +40,7 @@ class RegisterCard extends Component {
                     console.log('successful signup')
                     // console.log(response.data)
 					this.setState({ //redirect to login page
-						redirectTo: '/login'
+						redirectTo: '/users/login'
 					})
 				} else {
 					console.log('username already taken')
@@ -47,7 +48,6 @@ class RegisterCard extends Component {
 			}).catch(error => {
 				console.log('signup error: ')
 				console.log(error)
-
 			})
 	}
 
@@ -62,6 +62,7 @@ class RegisterCard extends Component {
                         <h3 className="text-center mb-3">
                             Register
                         </h3>
+                        
                         <div className="card-body">
                             <form>
                                 <div className="form-group">
