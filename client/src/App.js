@@ -59,7 +59,7 @@ const App = () => {
          <div className="App-Router">
           {/* <Navbar /> */}
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Admin} />
             <Route exact path="/cart" render={(props) => (<CartPage {...props} items={cart} onAddOne={addToCart} onRemoveOne={removeItem} />)} />
              <Route exact path="/home" component={Home} />
              <Route path="/about_us" component={About} />
