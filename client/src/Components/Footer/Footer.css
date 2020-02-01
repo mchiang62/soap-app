@@ -1,12 +1,14 @@
 #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    border-top: thin solid #78c2ad;
-    background-color: #f7f7f9;
+  width: 100%;
+  background-color: #f7f7f9;
 }
 
 .title {
-    margin-top: 15px;
-    text-align: center;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.footer {
+  width: 100% !important;
+  margin-bottom: -10;
 }
