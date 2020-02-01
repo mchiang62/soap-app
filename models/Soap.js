@@ -22,10 +22,10 @@ var Soaps = new Schema({
         type: String,
         required: true
     },
-    inCart: {
-        type: Boolean,
-        default: false,
-        required: true
+    count: {
+        type: Number,
+        required: true,
+        default: 0
     }
 });
 
