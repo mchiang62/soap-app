@@ -51,8 +51,6 @@ class RegisterCard extends Component {
 			})
 	}
 
-
-
     render() {
         return (
             <div className="row mt-5">
