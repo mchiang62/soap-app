@@ -5,8 +5,18 @@ import './CartPage.css';
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 
-function CartPage({ items, onAddOne, onRemoveOne, count }){
+const EmptyCart = () => (
+    <div className="CartPage-empty">
+      Your cart is empty.
+      <br/>
+      Why not add some products to it?
+    </div>
+  );
+  
+function CartPage({ items, onAddOne, onRemoveOne }){
     return(
+        items.length === 0 ? <EmptyCart/> :
+
         <div className="CartPage-items">
             <Navbar />
             <Header />
@@ -26,6 +36,9 @@ function CartPage({ items, onAddOne, onRemoveOne, count }){
                 </Item>
                 </li>
             )}
+              <li className="CartPage-item CartPage-total">
+                 Cart Total: ${items.reduce((sum, item) => sum + (item.price * item.count), 0)}
+               </li>
             </div>
         </div>
     );

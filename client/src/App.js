@@ -20,7 +20,7 @@ const summarizeCart = cart => {
   const groupedItems = cart.reduce((summary, item) =>{
     summary[item.id]=summary[item.id] || {
       ...item,
-      count:0
+      // count:0
     };
     summary[item.id].count++;
     
@@ -32,11 +32,12 @@ const summarizeCart = cart => {
 
 
 const App = () => {
-  const [activeTab, setActiveTab]= useState('items');
+  //const [activeTab, setActiveTab]= useState('items');
   const [cart, setCart] = useState([]);
 
   const addToCart = item => {
     setCart(prevCart => [...prevCart, item])
+    console.log(item.id)
     console.log(item.price);
     summarizeCart(cart)
   };
