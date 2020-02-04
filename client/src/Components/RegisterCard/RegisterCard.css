@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.register-card {
+#register-card {
   height: auto;
   margin: 0 auto;
   border: thin solid #78c2ad;

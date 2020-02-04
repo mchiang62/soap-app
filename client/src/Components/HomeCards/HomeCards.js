@@ -1,20 +1,25 @@
 import React from "react";
 import "./HomeCards.css";
 
-
 function HomeCards(props) {
-    return (
-      <div className="card">
-       <img src="https://www.thehistorymakers.org/sites/default/files/300x300" alt="placeholder" />
-        
-      </div>
-    );
-  }
+  return (
+    <div className="row">
+    <div className="col-6">
+      <br />
+      <br />
+      <h1>{props.header}</h1>
+    </div>
+    <div className="col-4">
+        <img
+          src={props.soapURL}
+          alt="barSoap"
+          height="300"
+          width="400"
+        />
+      <br />
+    </div>
+  </div>
+  );
+}
 
-
-  
-  export default HomeCards;
-  
-
-  
- 
+export default HomeCards;

@@ -54,7 +54,7 @@ function CartPage({ items, onAddOne, onRemoveOne }){
                         {/* <span className="CartItem-count">{item.count}</span> */}
                     <button
                         className="CartItem-addOne"
-                        onClick={()=> onAddOne(item)}>Add Item
+                        onClick={()=> onAddOne(item)}>Add Item 
                     </button>
                 </div>
             </Item>
