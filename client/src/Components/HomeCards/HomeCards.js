@@ -12,7 +12,7 @@ function HomeCards(props) {
     <div className="col-4">
         <img
           src={props.soapURL}
-          alt="barSoap"
+          alt="barsoaps"
           height="300"
           width="400"
         />

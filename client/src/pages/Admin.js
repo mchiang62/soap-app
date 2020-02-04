@@ -14,23 +14,39 @@ class Admin extends Component {
         this.deleteSoap = this.deleteSoap.bind(this)
         
         this.state = {
-            products : [],
             name: "",
             price: "",
             quantity: "",
-            image: ""
+            image: "",
+            products: [],
+            key: ""
         }
+        
+        
     }
+    
     
 
     componentDidMount() {
         this.loadSoaps();
+        console.log(this.state);
     }
 
     loadSoaps = () => {
         API.getSoaps()
-        .then(res =>
-            this.setState({products:res.data})
+            .then(res => {
+            //console.log(res.data[0]._id)
+                    
+            this.setState({
+                products: res.data,
+            //  id: res.data._id,
+            //  key: res.data.key
+            })
+            
+            console.log(this.state)
+
+            } 
+        
             )
             .catch(err => console.log(err));
     };
@@ -91,7 +107,7 @@ class Admin extends Component {
                         placeholder="New Soap Quantity"
                     />
                     <Input
-                        value={this.state.name}
+                        value={this.state.image}
                         onChange={this.handleInputChange}
                         name="image"
                         placeholder="New Soap Image Link"
@@ -108,7 +124,7 @@ class Admin extends Component {
                         {this.state.products.map(product => (
                             <AdminProductCard
                                 deleteSoap={this.deleteSoap}
-                                id={product.id}
+                                id={product._id}
                                 key={product.id}
                                 name={product.name}
                                 image={product.image}
