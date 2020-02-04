@@ -21,22 +21,7 @@ const Item = ({ item, children }) => (
           </ul>
           {children}
         </div>
-        {/* <div className="Item-left">
-            <div className="Item-image" />
-            <div className="Item-title">
-                {item.name}
-            </div>
-            <div className="Item-description">
-                {item.description}
-            </div>
-            <div className="Item-right">
-                <div className="Item-price">
-                    ${item.price}
-                </div>
-                {children}
-            </div>
-        </div> */}
-    </div>
+  </div>
 );
 Item.propTypes = {
     item: PropTypes.object.isRequired,

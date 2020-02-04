@@ -21,12 +21,13 @@ function CartPage({ items, onAddOne, onRemoveOne }){
     return(
         items.length === 0 ? <EmptyCart/> :
 
-        <div className="CartPage-items">
+<div className="CartPage-items">
             <Navbar />
             <Header />
-            <div className="row">
+
+    <div className="row">
             {items.map(item =>
-                <li key={item.id} className="CartPage-item">
+        <li key={item.id} className="CartPage-item">
             <Item item={item}>
                 <div className="CartItem-controls">
                     <button
@@ -40,14 +41,17 @@ function CartPage({ items, onAddOne, onRemoveOne }){
                     </button>
                 </div>
             </Item>
-            </li>
+            
+        <span className="CartPage-total">
+         {/* Cart Total: ${items.reduce((sum, item) => sum + (item.price * item.count), 0)} */}
+            Cart Total: ${(item.price * items.length)}
+        </span>
+        </li>
             )}
-              <li className="CartPage-item CartPage-total">
-                 Cart Total: ${items.reduce((sum, item) => sum + (item.price * item.count), 0)}
-               </li>
-            </div>
-        </div>
+    </div>
+</div>
     );
+   
 }
 
 CartPage.propTypes = {

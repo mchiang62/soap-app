@@ -37,8 +37,8 @@ const App = () => {
 
   const addToCart = item => {
     setCart(prevCart => [...prevCart, item])
-    console.log(item.id)
-    console.log(item.price);
+    console.log("item-id", item.id)
+    console.log("item-price", item.price);
     summarizeCart(cart)
   };
  
@@ -72,71 +72,9 @@ const App = () => {
            </Switch>
          </div>
        </Router>
-      {/* <Nav 
-      activeTab={activeTab}
-      onTabChange={setActiveTab}
-      /> */}
-      {/* <main className="App-content">
-        <Content 
-          tab={activeTab} 
-          onAddToCart={addToCart}
-          onRemoveItem={removeItem}
-          cart={summarizeCart(cart)}
-          />
-      </main> */}
     </div>
   );
   
 };
-
-// const Content = ({ tab, onAddToCart, onRemoveItem, cart }) => {
-//   switch(tab){
-//     default:
-//       case 'items':
-//         return (
-//         <ItemPage 
-//             items={items} 
-//             onAddToCart={onAddToCart}  
-//           />
-//         );
-//       case 'cart':
-//         return (
-//           <CartPage 
-//           items={cart} 
-//           onAddOne={onAddToCart}
-//           onRemoveOne={onRemoveItem}
-//         />);
-//   };
-// };
-
-
-
-
-// class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <div className="App">
-//           {/* <Navbar /> */}
-//           <Switch>
-//             <Route exact path="/" component={Home} />
-//             <Route exact path="/cart" component={Cart} />
-//             <Route exact path="/home" component={Home} />
-//             <Route path="/about_us" component={About} />
-//             <Route path="/contact_us" component={Contact} />
-//             <Route path="/products" component={Products} />
-//             <Route path="/register" component={Register} />
-//             <Route path="/login" component={Login} />
-//             {/* <Route component={NoMatch} /> */}
-//           </Switch>
-
-//         </div>
-//       </Router>
-
-//     )
-//   };
-// }
-
-
 
 export default App;
