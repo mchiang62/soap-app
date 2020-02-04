@@ -12,7 +12,10 @@ class Home extends Component {
       <div className="homePage">
         <Navbar />
 
-        <Header>
+        <Parallax
+          pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
+          height="200px"
+        >
           <br />
           <br />
           <h1>
@@ -26,32 +29,23 @@ class Home extends Component {
           </h3>
           <br />
           <button>Order now!</button>
-        </Header>
+        </Parallax>
 
-        <div className="homeontainer">
-          <div className="row">
-            <div className="col-6">
-              <br />
-              <br />
-              <h1>Made with natural ingredients</h1>
-            </div>
-            <div className="col-4">
-              <HomeCards>
-                <img
-                  src="https://live.staticflickr.com/65535/49439060548_2e9b890f50_b.jpg"
-                  alt="placeholder"
-                  height="300"
-                  width="400"
-                />
-              </HomeCards>
-              <br />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
-              <Parallax />
-            </div>
-          </div>
+        <div className="homecontainer">
+          <HomeCards
+            header="Made with natural ingredients"
+            soapURL="https://live.staticflickr.com/65535/49439060548_2e9b890f50_b.jpg"
+          />
+
+          <Parallax
+            pic="https://www.tokkoro.com/picsup/3034494-almost-spring_blown-out_faded_flower.jpg"
+            height="400px"
+          />
+
+          <HomeCards
+            header="made with these oils"
+            soapURL="https://live.staticflickr.com/65535/49439532561_201cf71c12_b.jpg"
+          />
         </div>
         <Footer />
       </div>
@@ -60,5 +54,4 @@ class Home extends Component {
 }
 
 export default Home;
-//   add jumbotron to header
-// add three cards - homecard component - need to insert to this page / col-4
+
