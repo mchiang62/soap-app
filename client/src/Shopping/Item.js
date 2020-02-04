@@ -15,9 +15,9 @@ const Item = ({ item, children }) => (
             <li>
               <strong>Price:</strong> {item.price}
             </li>
-            <li>
+            {/* <li>
               <strong>In Stock:</strong> {item.quantity}
-            </li>
+            </li> */}
           </ul>
           {children}
         </div>

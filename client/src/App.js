@@ -1,14 +1,14 @@
 //import React, { Component } from "react"
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Products from "./pages/Products";
+//import Products from "./pages/Products";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Cart from "./pages/Cart";
+//import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Nav from './Shopping/Nav';
+//import Nav from './Shopping/Nav';
 import ItemPage from './Shopping/ItemPage';
 import items  from './Shopping/static-data';
 import './App.css';

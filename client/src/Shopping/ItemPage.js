@@ -8,18 +8,18 @@ import Header from "../Components/Header/Header";
 
 function ItemPage({ items, onAddToCart }) {
     return(
-        <div className="ItemPage-items container">
+        <div className="ItemPage-items">
             <Navbar />
             <Header />
             <div className="row">
             {items.map(item =>
                 <li key={item.id} className="ItemPage-item">
-                <Item item={item}>
+            <Item item={item}>
                     <button
                         className="Item-addToCart"
                         onClick={() => onAddToCart(item)}>Add to Cart 
                 </button>
-                </Item>
+            </Item>
                 </li>
             )}
         </div>
