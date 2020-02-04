@@ -1,0 +1,20 @@
+/* .fullWidth {
+  width: 100%;
+} */
+
+#jumboHeader {
+  /* background-image: url("https://www.lifeinbalanceservices.com/wp-content/uploads/2015/12/bright-leaves-fade.jpg"); */
+  /* background-image: url("https://tribalmystic.files.wordpress.com/2015/07/autumn-leaves-backgrounds-wallpapers.jpg"); */
+  /* background-image: url("https://live.staticflickr.com/4656/27932518369_914995be80_b.jpg"); */
+  /* background-image: url("https://www.tokkoro.com/picsup/3034494-almost-spring_blown-out_faded_flower.jpg"); */
+  background-image: url("https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png");
+  background-size: cover;
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

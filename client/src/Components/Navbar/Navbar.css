@@ -1,12 +1,13 @@
 nav.navbar.navbar-default {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .brand-logo {
-    height: 50px;
-    width: auto;
+  height: 50px;
+  width: auto;
 }
 
 .navbar {
-    border-bottom: thick solid #78c2ad;
+  border-bottom: thick solid #78c2ad;
+  width: 100%;
 }

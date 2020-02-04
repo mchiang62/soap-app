@@ -1,8 +1,16 @@
 .App {
   text-align: center;
-  max-width: 800px;
-  margin:0 auto;
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
+  /* width: 100%; */
 }
+/* 
+.fullWidth {
+  width: 100%;
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -21,44 +29,48 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .App-nav {
-  margin:20px;
-  padding:10px;
+  margin: 20px;
+  padding: 10px;
   border-bottom: 2px solid #508fca;
 }
 
-.App-nav ul{
+.App-nav ul {
   padding: 0;
   margin: 0;
 }
 
-.App-nav button{
-font-size: 18px;
-background: transparent;
-border:none;
-cursor:pointer;
+.App-nav button {
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .App-nav-item {
   list-style: none;
   display: inline-block;
   margin-right: 32 px;
-  font-size:24px;
+  font-size: 24px;
   border-bottom: 4px solid transparent;
 }
 
-.App-content{
+.App-content {
   margin: 0 20px;
 }
 
-.App-nav-item button:hover{
+.App-nav-item button:hover {
   color: #999;
 }
 
-.App-nav-item.selected{
+.App-nav-item.selected {
   border-bottom-color: #ffaa3f;
 }
