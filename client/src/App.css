@@ -1,16 +1,6 @@
 .App {
   text-align: center;
-<<<<<<< HEAD
-  
   margin:0 auto;
-=======
-  margin: 0 auto;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; */
-  /* width: 100%; */
->>>>>>> 8122cdba8c8d47f26d81935f6b3ca6fbc73ec798
 }
 /* 
 .fullWidth {
