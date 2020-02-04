@@ -15,28 +15,13 @@ const Item = ({ item, children }) => (
             <li>
               <strong>Price:</strong> {item.price}
             </li>
-            <li>
+            {/* <li>
               <strong>In Stock:</strong> {item.quantity}
-            </li>
+            </li> */}
           </ul>
           {children}
         </div>
-        {/* <div className="Item-left">
-            <div className="Item-image" />
-            <div className="Item-title">
-                {item.name}
-            </div>
-            <div className="Item-description">
-                {item.description}
-            </div>
-            <div className="Item-right">
-                <div className="Item-price">
-                    ${item.price}
-                </div>
-                {children}
-            </div>
-        </div> */}
-    </div>
+  </div>
 );
 Item.propTypes = {
     item: PropTypes.object.isRequired,
