@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const passport = require("passport");
+// const passport = require("../../config/passport")
 
 // User model
 const User = require("../../models/User");
@@ -13,7 +14,8 @@ router.get("/login", (req, res) => res.send("Login"));
 router.get("/register", (req, res) => res.send("Register"));
 
 // Register Handle
-router.post("/", (req, res) => {
+router.post("/registerUser", (req, res) => {
+    console.log("user registration")
     const { name, email, password, password2 } = req.body;
     console.log(req.body)
     let errors = [];
@@ -21,16 +23,19 @@ router.post("/", (req, res) => {
     // Check for required fields
     if (!name || !email || !password || !password2) {
         errors.push({ msg: "Please fill in all fields" })
+        console.log(errors);
     }
 
     // Check to see if passwords match
     if (password !== password2) {
         errors.push({ msg: "Passwords do not match." })
+        console.log(errors);
     }
 
     // Check password length is at least 6 characters long
     if (password.length < 6) {
         errors.push({ msg: "Password needs to be at least 6 characters" })
+        console.log(errors);
     }
 
     if (errors.length > 0) {
@@ -45,9 +50,10 @@ router.post("/", (req, res) => {
         // Validation passed
         User.findOne({ email: email })
             .then(user => {
+                console.log(user);
                 if (user) {
                     // User exists
-                    errors.push( "Email is already registered" );
+                    errors.push("Email is already registered");
                     res.render("register", {
                         errors,
                         name,
@@ -61,6 +67,7 @@ router.post("/", (req, res) => {
                         email,
                         password
                     });
+                    console.log(newUser)
 
                     // Hash Password
                     bcrypt.genSalt(10, (err, salt) =>
@@ -71,10 +78,10 @@ router.post("/", (req, res) => {
 
                             // Save user
                             newUser.save()
-                            
+
                                 .then(user => {
                                     req.flash("success_msg", "You are now registered and can log in")
-                                    res.redirect("/users/login");
+                                    res.redirect("/login");
                                 })
                                 .catch(err)
                         }))
