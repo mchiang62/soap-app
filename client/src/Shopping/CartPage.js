@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Item from '../Shopping/Item';
-import './CartPage.css';
+import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
+import './CartPage.css';
 
 const EmptyCart = () => (
 <div>
@@ -24,8 +25,24 @@ function CartPage({ items, onAddOne, onRemoveOne }){
 <div className="CartPage-items">
             <Navbar />
             <Header />
-
-    <div className="row">
+<div className="CartHeader">
+    <h2> Your Shopping Cart</h2>  
+        <h2 className="CartPage-total">
+         {/* Cart Total: ${items.reduce((sum, item) => sum + (item.price * item.count), 0)} */}
+            Total Amount: ${(4 * items.length)}.00
+        </h2> 
+        <br></br>
+    <div className="checkoutButton">
+        <Link to="/cart" className={window.location.pathname === "/cart"}>
+            <button className="btn btn-primary my-2 my-sm-0" href="/cart" type="submit">Checkout</button>
+        </Link>
+        <Link to="/products" className={window.location.pathname === "/products"}>
+            <button className="btn btn-primary my-2 my-sm-0" href="/cart" type="submit">Continue Shopping</button>
+        </Link>
+    </div>
+    <hr></hr>
+</div>
+<div className="CartPage row">
             {items.map(item =>
         <li key={item.id} className="CartPage-item">
             <Item item={item}>
@@ -37,15 +54,10 @@ function CartPage({ items, onAddOne, onRemoveOne }){
                         {/* <span className="CartItem-count">{item.count}</span> */}
                     <button
                         className="CartItem-addOne"
-                        onClick={()=> onAddOne(item)}>Add Another
+                        onClick={()=> onAddOne(item)}>Add Item
                     </button>
                 </div>
             </Item>
-            
-        <span className="CartPage-total">
-         {/* Cart Total: ${items.reduce((sum, item) => sum + (item.price * item.count), 0)} */}
-            Cart Total: ${(item.price * items.length)}
-        </span>
         </li>
             )}
     </div>

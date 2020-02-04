@@ -41,3 +41,12 @@ button .CartItem-removeOne{
     border-radius: 3px;
     cursor: pointer;
 }
+
+.CartHeader{
+    padding: 5px;
+}
+
+
+.CartPage{
+    text-align: center;
+}
