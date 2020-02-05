@@ -6,13 +6,13 @@ class Alert extends Component {
         this.alertControl = this.alertControl.bind(this)
     }
 
-    alertControl() {
-        if (typeof errors != 'undefined') {
-            errors.foreach(function (error) {
-                return error.msg;
-            })
-        }
-    }
+    // alertControl() {
+    //     if (typeof errors != 'undefined') {
+    //         errors.foreach(function (error) {
+    //             return error.msg;
+    //         })
+    //     }
+    // }
 
     render() {
         return (

@@ -42,9 +42,38 @@ class Home extends Component {
             height="400px"
           />
 
+          <div className="row">
+            <div className="col-6">
+              <br />
+              <br />
+              <img
+                src="https://live.staticflickr.com/65535/49439060548_2e9b890f50_b.jpg"
+                alt="barsoaps"
+                height="300"
+                width="400"
+              />
+            </div>
+            <div className="col-4">
+              <br />
+              <br />
+              <h1>description</h1>
+              <br />
+            </div>
+          </div>
+
+          <Parallax
+            pic="https://www.tokkoro.com/picsup/3034494-almost-spring_blown-out_faded_flower.jpg"
+            height="400px"
+          />
+
           <HomeCards
             header="made with these oils"
             soapURL="https://live.staticflickr.com/65535/49439532561_201cf71c12_b.jpg"
+          />
+
+          <Parallax
+            pic="https://www.tokkoro.com/picsup/3034494-almost-spring_blown-out_faded_flower.jpg"
+            height="400px"
           />
         </div>
         <Footer />
@@ -54,4 +83,3 @@ class Home extends Component {
 }
 
 export default Home;
-

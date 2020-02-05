@@ -21,18 +21,18 @@ class LoginCard extends Component {
 
     render() {
         return (
-            <div class="row mt-5">
-                <div class="col-md-12 m-auto">
-                    <div class="card login-card">
+            <div className="row mt-5">
+                <div className="col-md-12 m-auto">
+                    <div className="card login-card" id="login-card">
                         <div className="logo">
                             <img src="https://live.staticflickr.com/65535/49435877052_170647b629_o.png" class="login-card-img" alt="soap-logo"></img>
                         </div>
-                        <h3 class="text-center mb-3">
+                        <h3 className="text-center mb-3">
                             Login
-                    </h3>
+                        </h3>
                         <div className="card-body">
-                            <form action="/users/login" method="POST">
-                                <div class="form-group">
+                            <form>
+                                <div className="form-group">
                                     <label for="email">Email</label>
                                     <input
                                         type="text"
@@ -44,7 +44,7 @@ class LoginCard extends Component {
                                         onChange={this.handleChange}
                                     />
                                 </div>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="password">Password</label>
                                     <input
                                         type="text"
@@ -56,9 +56,9 @@ class LoginCard extends Component {
                                         onChange={this.handleChange}
                                     />
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                <button type="submit" className="btn btn-primary btn-block">Login</button>
                             </form>
-                            <p class="lead mt-4">
+                            <p className="lead mt-4">
                                 No Account? <a href="/register">Register</a>
                             </p>
                         </div>
