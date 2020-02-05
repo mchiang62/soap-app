@@ -1,7 +1,7 @@
-#footer {
+/* #footer {
   width: 100%;
   background-color: #f7f7f9;
-}
+} */
 
 .title {
   margin-top: 15px;
@@ -11,4 +11,11 @@
 .footer {
   width: 100% !important;
   margin-bottom: -10;
+  /* text-align: center; */
 }
+
+.footerP, .footerH {
+  text-align: center;
+}
+
+

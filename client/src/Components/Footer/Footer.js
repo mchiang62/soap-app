@@ -1,14 +1,26 @@
 import React from "react";
 import "./Footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope } from  "@fortawesome/free-solid-svg-icons"
+
 
 function Footer() {
   return (
     <div className="card footer">
-      <div className="card-header">Featured</div>
       <div className="card-body">
-        <h5 className="card-title">Browning Soaps</h5>
-        <p className="card-text">
-          With supporting text below as a natural lead-in to additional content.
+        <h4 className="card-title footerH"><strong>Browning Soaps</strong></h4>
+        <br />
+        <p className="card-text footerP">
+          Thank you for visiting! Check back weekly for new scents!
+          <br />
+         Follow us on <a href="https://www.facebook.com/browningssoap"> 
+        <FontAwesomeIcon className="add-classnames-like-this" icon={faFacebookF} fixedWidth />
+        </a> for our latest updates!
+        <br />
+        <FontAwesomeIcon className="add-classnames-like-this" icon={faPhone} fixedWidth /> 404-229-7644
+        <br />
+        <FontAwesomeIcon className="add-classnames-like-this" icon={faEnvelope} fixedWidth /> browningssoap@gmail.com
         </p>
       </div>
     </div>

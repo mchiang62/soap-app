@@ -1,13 +1,3 @@
-// import React from "react";
-// import "./Parallax.css";
-
-// function Parallax (props) {
-//     return <h1 className="parallax">{props.children}</h1>;
-//   }
-  
-//   export default Parallax;
-
-
 import React from 'react';
 import { Parallax as ReactParallax } from 'react-parallax';
 
@@ -15,7 +5,7 @@ import { Parallax as ReactParallax } from 'react-parallax';
 const Parallax = (props) => (
     <ReactParallax
       bgImage={props.pic}
-      bgImageAlt="the cat"
+      bgImageAlt="scenery"
       strength={200}
     >
     {props.children}
@@ -24,3 +14,5 @@ const Parallax = (props) => (
     );
 
 export default Parallax;
+
+
