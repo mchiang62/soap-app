@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from  "@fortawesome/free-solid-svg-icons"
 
 function Navbar() {
     return (
@@ -60,7 +62,7 @@ function Navbar() {
                     </li>
                     <li className="list-inline-item">
                         <Link to="/cart" className={window.location.pathname === "/cart"}>
-                            <button className="btn btn-primary my-2 my-sm-0" href="/cart" type="submit">Shopping Cart</button>
+                            <a href="/cart" type="submit"><FontAwesomeIcon className="add-classnames-like-this" icon={faShoppingCart} fixedWidth /></a>
                         </Link>
                     </li>
                 </ul>
