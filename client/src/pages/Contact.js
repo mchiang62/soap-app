@@ -5,12 +5,25 @@ import Footer from "../Components/Footer/Footer";
 import Wrapper from "../Components/Wrapper/Wrapper";
 import API from "../Utils/API";
 import {Input, TextArea, FormBtn} from "../Components/AddMessageForm";
+import NoteCard from "../Components/NoteCard/NoteCard";
 
 class Contact extends Component {
     state = {
+        notes: [],
         name: "",
         email: "",
         noteText: ""
+    }
+
+    componentDidMount() {
+        this.loadNotes();
+    }
+
+    loadNotes = () => {
+        API.getNotes()
+        .then(res => 
+            this.setState({notes: res.data})).catch(err => console.log(err));
+
     }
     //If we want to load other messages on this page we can add them here
     handleInputChange = event => {
@@ -21,8 +34,8 @@ class Contact extends Component {
     };
 
     handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.name && this.state.email && this.state.note) {
+        //event.preventDefault();
+        if (this.state.name && this.state.email && this.state.noteText) {
             API.saveNote({
                 name: this.state.name,
                 email: this.state.email,
@@ -38,6 +51,18 @@ class Contact extends Component {
                 <Navbar />
                 <Header><p>Please leave us a message to tell us anything!</p></Header>
                 <Wrapper>
+                    <div className="container">
+                        <div className="row">
+                            {this.state.notes.map(note => (
+                                <NoteCard
+                                    id={note.id}
+                                    key={note.id}
+                                    name={note.name}
+                                    noteText={note.noteText}
+                                    />
+                            ))}
+                        </div>
+                    </div>
                 <form>
                     <Input
                         value={this.state.name}
@@ -58,7 +83,7 @@ class Contact extends Component {
                         placeholder="Type your message here!"
                         />
                     <FormBtn
-                        disabled={!(this.state.name && this.state.email && this.state.note)}
+                        disabled={!(this.state.name && this.state.email && this.state.noteText)}
                         onClick={this.handleFormSubmit}>
                             Send your message!
                         </FormBtn>
