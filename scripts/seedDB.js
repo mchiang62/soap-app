@@ -139,26 +139,46 @@ const photoSeed = [
     }
 ]
 
-db.Soap
-    .remove({})
-    .then(() => db.Soap.collection.insertMany(soapSeed))
-    .then(data => {
-        console.log(data.result.n + " records inserted into Soaps!");
-        //process.exit(0);
-    })
-    .catch(err => {
-        console.error(err);
-        process.exit(1);
-    });
+const messageSeed = [
+    {
+        name: "Dan",
+        email: "Dan@dan.com",
+        note: "Here's a seeded note to start with"
+    }
+]
 
-db.Photo 
+// db.Soap
+//     .remove({})
+//     .then(() => db.Soap.collection.insertMany(soapSeed))
+//     .then(data => {
+//         console.log(data.result.n + " records inserted into Soaps!");
+//         //process.exit(0);
+//     })
+//     .catch(err => {
+//         console.error(err);
+//         process.exit(1);
+//     });
+
+// db.Photo 
+//     .remove({})
+//     .then(() => db.Photo.collection.insertMany(photoSeed))
+//     .then(data => {
+//         console.log(data.result.n + " records inserted into Photos!");
+//         //process.exit(0);
+//     })
+//     .catch(err => {
+//         console.error(err);
+//         process.exit(1);
+//     });
+
+db.Message
     .remove({})
-    .then(() => db.Photo.collection.insertMany(photoSeed))
+    .then(() => db.Message.collection.insertMany(messageSeed))
     .then(data => {
-        console.log(data.result.n + " records inserted into Photos!");
+        console.log(data.result.n + " records inserted into Messages!");
         process.exit(0);
     })
     .catch(err => {
         console.error(err);
         process.exit(1);
-    });
+    })

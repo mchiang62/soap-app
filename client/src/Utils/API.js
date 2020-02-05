@@ -19,5 +19,11 @@ export default {
     },
     getPhoto: function(id) {
         return axios.get("/api/photo" + id);
+    },
+    getNotes: function() {
+        return axios.get("/api/notes");
+    },
+    saveNote: function(noteData) {
+        return axios.post("/api/notes", noteData);
     }
 };
