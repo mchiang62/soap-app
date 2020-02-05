@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { faShoppingCart, faPhone, faEnvelope } from  "@fortawesome/free-solid-svg-icons"
+import { faPhone, faEnvelope } from  "@fortawesome/free-solid-svg-icons"
 
 
 function Footer() {
@@ -17,8 +17,6 @@ function Footer() {
          Follow us on <a href="https://www.facebook.com/browningssoap"> 
         <FontAwesomeIcon className="add-classnames-like-this" icon={faFacebookF} fixedWidth />
         </a> for our latest updates!
-        <br />
-        <FontAwesomeIcon className="add-classnames-like-this" icon={faShoppingCart} fixedWidth />
         <br />
         <FontAwesomeIcon className="add-classnames-like-this" icon={faPhone} fixedWidth /> 404-229-7644
         <br />

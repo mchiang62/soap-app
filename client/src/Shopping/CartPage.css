@@ -1,6 +1,7 @@
 .CartPage-items{
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 .CartPage-items li{
     list-style: none;
@@ -9,15 +10,43 @@
     padding: 5px 10px;
     border: 1px solid  #ccc;
 }
-.CartItem-addOne,
-.CartItem-removeOne{
+.CartItem-controls{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.CartItem-addOne:hover,
+.CartItem-removeOne:hover{
+      background-color: rgb(128, 98, 69);
+}
+
+button .CartItem-addOne{
+    border-style: solid;
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    background: #fff5;
+    margin-bottom: 5px;
+    font-size: 14px;
+    border: 2px solid #36322c;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button .CartItem-removeOne{
+    border-style: solid;
+    padding: 5px 10px;
     background: #fff;
+    margin-bottom: 5px;
+    font-size: 14px;
+    border: 2px solid #36322c;
+    border-radius: 3px;
+    cursor: pointer;
 }
-.CartItem-addOne{
-    border-left:none;
+
+.CartHeader{
+    padding: 5px;
 }
-.CartItem-removeOne{
-    border-right: none;
+
+
+.CartPage{
+    text-align: center;
 }
