@@ -27,14 +27,13 @@ const summarizeCart = cart => {
 };
 
 const App = () => {
-  //const [activeTab, setActiveTab]= useState('items');
   const [cart, setCart] = useState([]);
 
   const addToCart = item => {
     setCart(prevCart => [...prevCart, item])
     console.log("item-id", item.id)
     console.log("item-price", item.price);
-    summarizeCart(cart)
+    //summarizeCart(cart)
   };
 
   const removeItem = item => {
@@ -46,7 +45,7 @@ const App = () => {
         copy.splice(index, 1);
         return copy;
       });
-      summarizeCart(cart);
+      //summarizeCart(cart);
     }
   };
   return (

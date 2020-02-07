@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import Item from '../Shopping/Item';
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
@@ -11,16 +11,20 @@ const EmptyCart = () => (
         <Navbar />
         <Header />
     <div className="CartPage-empty">
-        Your cart is empty.
-      <br/>
-        Why not add some products to it?
+        <br></br>
+        Your Shopping Cart is empty. That's sad. 
+        <br></br>
+        Your Cart lives to serve. Give it purpose — fill it with soap, soap, and more soap!
+
     </div>
 </div>   
   );
   
+
 function CartPage({ items, onAddOne, onRemoveOne }){
-    return(
-        items.length === 0 ? <EmptyCart/> :
+return(
+    
+    items.length === 0 ? <EmptyCart/> :
 
 <div className="CartPage-items">
             <Navbar />
@@ -42,6 +46,7 @@ function CartPage({ items, onAddOne, onRemoveOne }){
     </div>
     <hr></hr>
 </div>
+
 <div className="CartPage row">
             {items.map(item =>
         <li key={item.id} className="CartPage-item">
@@ -66,10 +71,10 @@ function CartPage({ items, onAddOne, onRemoveOne }){
    
 }
 
-CartPage.propTypes = {
-    items: PropTypes.array.isRequired,
-    onAddOne: PropTypes.func.isRequired,
-    onRemoveOne: PropTypes.func.isRequired
-};
+// CartPage.propTypes = {
+//     items: PropTypes.array.isRequired,
+//     onAddOne: PropTypes.func.isRequired,
+//     onRemoveOne: PropTypes.func.isRequired
+// };
 
 export default CartPage;
