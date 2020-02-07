@@ -63,6 +63,7 @@ const App = () => {
              <Route path="/products" render={(props) => (<ItemPage {...props} items={items} onAddToCart={addToCart} />)} />
              <Route path="/register" component={Register} />
              <Route path="/login" component={Login} />
+             <Route path="/admin" component={Admin}/>
              {/* <Route component={NoMatch} /> */}
            </Switch>
          </div>
