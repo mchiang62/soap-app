@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route } from "react-router-dom";
+import CartPage from '../Shopping/CartPage'
 //import PropTypes from 'prop-types';
 import Item from './Item';
 import './ItemPage.css';
@@ -48,12 +50,13 @@ addToCart = (cartItem) =>{
     
 
     render () {  
+        
         return (
-        // {/* <Route exact path="/cart" render={(props) => <CartPage {...props} items={this.state.cart}/> */}
 
         <div className="ItemPage-items">
             <Navbar />
             <Header />
+            <Route  path="/cart" render={(props) => <CartPage {...props} stuff={"YES"} items={this.state.cart} />} />
             <div className="row">
             {this.state.items.map(item => (
                 <li key={item.id} className="ItemPage-item">
@@ -69,6 +72,7 @@ addToCart = (cartItem) =>{
                 </li>
              ) )}
         </div>
+        
         </div>
     )}
 };

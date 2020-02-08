@@ -1,6 +1,6 @@
 //import React, { Component } from "react"
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -50,7 +50,6 @@ const App = () => {
   // };
   return (
     <div className="App">
-      <Router>
         <div className="App-Router fullWidth">
           {/* <Navbar /> */}
           <Switch>
@@ -68,7 +67,6 @@ const App = () => {
              {/* <Route component={NoMatch} /> */}
            </Switch>
          </div>
-       </Router>
     </div>
   );
 };
