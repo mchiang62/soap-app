@@ -49,7 +49,7 @@ addToCart = (cartItem) =>{
 
     render () {  
         return (
-        {/* <Route exact path="/cart" render={(props) => <CartPage {...props} items={this.state.cart}/> */}
+        // {/* <Route exact path="/cart" render={(props) => <CartPage {...props} items={this.state.cart}/> */}
 
         <div className="ItemPage-items">
             <Navbar />
