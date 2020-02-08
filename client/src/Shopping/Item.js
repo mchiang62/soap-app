@@ -6,15 +6,13 @@ import '../App.js';
 
 
 function Item(props) {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = props => {
-    setCart(prevCart => [...prevCart, props])
-    console.log("item-id", props.id)
-    console.log("item-price", props.price);
-    //summarizeCart(cart)
-  };
-  console.log("itemprops", {props})
+  // const addToCart = props => {
+  //   setCart(prevCart => [...prevCart, props])
+  //   console.log("item-id", props.id)
+  //   console.log("item-price", props.price);
+  //   //summarizeCart(cart)
+  // };
+  // console.log("itemprops", {props})
 
 
   return(
@@ -32,7 +30,7 @@ function Item(props) {
             </li>
             <button
               className="Item-addToCart"
-              onClick={() => addToCart(props)}>Add to Cart
+              onClick={() => props.addToCart(props.item)}>Add to Cart
             </button>
           </ul>
         </div>

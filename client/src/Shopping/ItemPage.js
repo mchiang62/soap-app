@@ -7,29 +7,40 @@ import Header from "../Components/Header/Header";
 import API from "../Utils/API";
 
 class ItemPage extends React.Component {
-    constructor(props){
-        super(props) 
-           this.state = {
+    // constructor(props){
+        // super(props) 
+           state = {
             name:"",
             price: "",
             image:"",
             key:"",
             items: [],
             cart: []
-        }
+        // }
      
     }
+
+addToCart = (cartItem) =>{
+    const updatedCart = this.state.cart
+    updatedCart.push(cartItem)
+    this.setState({cart: updatedCart}, ()=> console.log('cart:', this.state.cart))
+};
+
 
 // function ItemPage({ items, onAddToCart }) {
     componentDidMount() {
         this.loadSoaps();
       }
     
-      loadSoaps = () => {
+      loadSoaps = ()  => {
         API.getSoaps()
           .then(res => {
-            this.setState({items: res.data})
-            }
+            this.setState({
+                items: res.data
+                //  }, () => console.log('all products:', this.state.items))
+                 })
+
+            }, 
           )
           .catch(err => console.log(err));
       };
@@ -38,25 +49,23 @@ class ItemPage extends React.Component {
 
     render () {  
         return (
+        {/* <Route exact path="/cart" render={(props) => <CartPage {...props} items={this.state.cart}/> */}
+
         <div className="ItemPage-items">
             <Navbar />
             <Header />
             <div className="row">
             {this.state.items.map(item => (
-                <li className="ItemPage-item">
+                <li key={item.id} className="ItemPage-item">
                     <Item 
                        id={item._id}
-                       key={item.id}
                        name={item.name}
                        image={item.image}
                        price={item.price}
+                       item={item}
+                       addToCart={this.addToCart}
                        />
-                    {/* item={item}> */}
-                        {/* <button
-                            className="Item-addToCart"
-                            onClick={this.props.onAddToCart}>Add to Cart 
-                        </button> */}
-                    {/* </Item> */}
+        }
                 </li>
              ) )}
         </div>
