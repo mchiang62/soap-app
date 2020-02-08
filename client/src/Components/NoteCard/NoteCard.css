@@ -1,12 +1,13 @@
-.card {
+.noteCard {
     background: #fff;
     border-radius: 2px;
-    height: 325px;
+    height: 150px !important;
     margin: 1rem;
     position: relative;
-    width: 325px;
+    width: 60px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-    text-align: left;
+    text-align: center !important;
+    padding: 17px;
   }
   
   .card > .content {
@@ -15,14 +16,14 @@
     color: black;
   }
   
-  .card > .content > ul {
-    list-style-type: none;
-    margin-top: 10px;
-    margin-left: 10%;
-    margin-right:10%;
+
+  .noteText {
+    font-size: 20px;
   }
-  
-  .card > .content > ul > li {
-    margin-top: 10px;
+
+  .noteName {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
   }
-  
