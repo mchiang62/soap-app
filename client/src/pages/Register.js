@@ -12,6 +12,8 @@ class Register extends Component {
                 <div className="Register">
                     <RegisterCard />
                 </div>
+                <br />
+                <br />
                 <Footer />
             </div>
         );

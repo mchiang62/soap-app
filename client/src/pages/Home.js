@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import Navbar from "../Components/Navbar/Navbar";
-import Header from "../Components/Header/Header";
 import HomeCards from "../Components/HomeCards/HomeCards";
 import Footer from "../Components/Footer/Footer";
 import Parallax from "../Components/Parallax/Parallax";
-// import Modals from "../Components/Modals/Modals"
 
 class Home extends Component {
   render() {
