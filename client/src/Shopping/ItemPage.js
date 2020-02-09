@@ -51,7 +51,6 @@ addToCart = (cartItem) =>{
         <div className="ItemPage-items">
             <Navbar />
             <Header />
-            <Route path="/cart" render={(props) => <CartPage {...props} items={this.state.cart} />} />
             <div className="row">
             {this.state.items.map(item => (
                 <li key={item.id} className="ItemPage-item">

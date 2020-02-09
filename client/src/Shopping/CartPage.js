@@ -1,67 +1,50 @@
 import React from 'react';
-import './CartPage.css';
-//import PropTypes from 'prop-types';
-import ItemPage from '../Shopping/ItemPage';
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import './CartPage.css';
-import API from "../Utils/API";
+
 
 class CartPage extends React.Component{
-    constructor(props){
-        super(props) 
+    constructor(){
+       super() 
           this.state = {
-           name:"",
-           price: "",
-           image:"",
-           key:"",
-           items: [],
-           cart: []
+           cart: [],
         }
-}
+    }
 
-  componentDidMount() {
-    const cart = localStorage.getItem(cart);
-    this.setState({ cart });
+
+  componentDidMount() { 
+   const cart = JSON.parse(localStorage.getItem("cart"));
+    console.log("localstor",cart);
+     this.setState({cart: cart});
+     console.log("displayCart",this.state.cart);
+
   }
 
-// loadSoaps = ()  => {
-//     API.getSoaps()
-//       .then(res => {
-//         this.setState({
-//             items: res.data
-//             //  }, () => console.log('all products:', this.state.items))
-//              })
-//         }, 
-//       )
-//       .catch(err => console.log(err));
-//   };
-
-    EmptyCart = () => (
-    <div>
-            <Navbar />
-            <Header />
-        <div className="CartPage-empty">
-            <br></br>
-            Your Shopping Cart is empty. That's sad. 
-            <br></br>
-            Your Cart lives to serve. Give it purpose — fill it with soap, soap, and more soap!
-        </div>
-    </div>   
-  );
+//     EmptyCart = () => (
+//     <div>
+//             <Navbar />
+//             <Header />
+//         <div className="CartPage-empty">
+//             <br></br>
+//             Your Shopping Cart is empty. That's sad. 
+//             <br></br>
+//             Your Cart lives to serve. Give it purpose — fill it with soap, soap, and more soap!
+//         </div>
+//     </div>   
+//   );
 
     render(){
-         console.log('cart ms', this.props);
     return(
-        //items.length === 0 ? <EmptyCart/> :
+        //displayCart.length === 0 ? {EmptyCart} :
         <div className="CartPage-items">
                     <Navbar />
                     <Header />
         <div className="CartHeader">
             <h2> Your Shopping Cart</h2>  
                 <h2 className="CartPage-total">
-                 {/* Total Amount: ${(4 * items.length)}.00 */}
+                 {/* Total Amount: ${(4 * displayCart.length)}.00 } */}
                 </h2> 
                 <br></br>
             <div className="checkoutButton">
@@ -74,6 +57,26 @@ class CartPage extends React.Component{
             </div>
             <hr></hr>
         </div>
+
+        {/* <div className="ItemPage-items">
+            <Navbar />
+            <Header />
+            <div className="row">
+            {this.state.items.map(item => (
+                <li key={item.id} className="ItemPage-item">
+                    <Item 
+                       id={item._id}
+                       name={item.name}
+                       image={item.image}
+                       price={item.price}
+                       item={item}
+                       addToCart={this.addToCart}
+                       />
+        
+                </li>
+             ) )}
+        </div>
+        </div> */}
     </div>
 
     )

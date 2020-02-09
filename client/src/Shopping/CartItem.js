@@ -4,22 +4,22 @@ import './ItemPage.css';
 import '../App.js';
 
 
-function CartItem(props) {
-  const [cart, setCart] = useState([]);
+// function CartItem(props) {
+//   const [cart, setCart] = useState([]);
 
-  const removeItem = props => {
-    let index = cart.findIndex(i => i.id === props.id);
-    if (index >= 0) {
-      // alert("Your Item has been deleted");
-      setCart(cart => {
-        const copy = [...cart];
-        copy.splice(index, 1);
-        return copy;
-      });
-      //summarizeCart(cart);
-    }
-  };
-  console.log("cartprops", {props})
+  // const removeItem = props => {
+  //   let index = cart.findIndex(i => i.id === props.id);
+  //   if (index >= 0) {
+  //     // alert("Your Item has been deleted");
+  //     setCart(cart => {
+  //       const copy = [...cart];
+  //       copy.splice(index, 1);
+  //       return copy;
+  //     });
+  //     //summarizeCart(cart);
+  //   }
+  // };
+  // console.log("cartprops", {props})
 
 
   return(
