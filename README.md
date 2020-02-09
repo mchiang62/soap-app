@@ -34,10 +34,10 @@ npm run seed
 
 This will seed your database with some starter information, which can be found in the seedDB file.  Once your database has been seeded and your node modules installed, you can spin up the app on your local machine.  To do this, first change directory back to the root directory of the repository, and then run:
 
-...
+```
 
 npm start
-...
+```
 
 This will start the server on your local machine.  Congratulations!  You have now started the project.
 
