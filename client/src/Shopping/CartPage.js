@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
+import CartItem from "../Shopping/CartItem";
 import './CartPage.css';
 
 
@@ -13,38 +14,35 @@ class CartPage extends React.Component{
         }
     }
 
-
-  componentDidMount() { 
-   const cart = JSON.parse(localStorage.getItem("cart"));
-    console.log("localstor",cart);
-     this.setState({cart: cart});
-     console.log("displayCart",this.state.cart);
-
-  }
-
-//     EmptyCart = () => (
-//     <div>
-//             <Navbar />
-//             <Header />
-//         <div className="CartPage-empty">
-//             <br></br>
-//             Your Shopping Cart is empty. That's sad. 
-//             <br></br>
-//             Your Cart lives to serve. Give it purpose — fill it with soap, soap, and more soap!
-//         </div>
-//     </div>   
-//   );
+    // EmptyCart(){
+    //     <div>
+    //             <Navbar />
+    //             <Header />
+    //         <div className="CartPage-empty">
+    //             <br></br>
+    //             Your Shopping Cart is empty. That's sad. 
+    //             <br></br>
+    //             Your Cart lives to serve. Give it purpose — fill it with soap, soap, and more soap!
+    //         </div>
+    //     </div>   
+    // };
 
     render(){
+     
+
+        this.state.cart = JSON.parse(sessionStorage.getItem("cart"));
+        //console.log("localstor",cart);
+         console.log("displayCart",this.state.cart);
+
     return(
-        //displayCart.length === 0 ? {EmptyCart} :
+       // this.state.cart.length === 0 ? {EmptyCart} :
         <div className="CartPage-items">
                     <Navbar />
                     <Header />
         <div className="CartHeader">
             <h2> Your Shopping Cart</h2>  
                 <h2 className="CartPage-total">
-                 {/* Total Amount: ${(4 * displayCart.length)}.00 } */}
+                 Total Amount: ${(4 * this.state.cart.length)}.00 
                 </h2> 
                 <br></br>
             <div className="checkoutButton">
@@ -58,28 +56,27 @@ class CartPage extends React.Component{
             <hr></hr>
         </div>
 
-        {/* <div className="ItemPage-items">
-            <Navbar />
-            <Header />
+        <div className="ItemPage-items">
             <div className="row">
-            {this.state.items.map(item => (
+            {this.state.cart.map(item => (
                 <li key={item.id} className="ItemPage-item">
-                    <Item 
+                    <CartItem 
                        id={item._id}
                        name={item.name}
                        image={item.image}
                        price={item.price}
                        item={item}
-                       addToCart={this.addToCart}
+                
                        />
         
                 </li>
              ) )}
         </div>
-        </div> */}
+        </div>
     </div>
 
     )
     };
 };
+
 export default CartPage;

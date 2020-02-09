@@ -4,15 +4,6 @@ import '../App.js';
 
 
 function Item(props) {
-  // const addToCart = props => {
-  //   setCart(prevCart => [...prevCart, props])
-  //   console.log("item-id", props.id)
-  //   console.log("item-price", props.price);
-  //   //summarizeCart(cart)
-  // };
-  // console.log("itemprops", {props})
-
-
   return(
     <div className="Item card">
         <div className="img-container">

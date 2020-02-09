@@ -24,7 +24,7 @@ class ItemPage extends React.Component {
 addToCart = (cartItem) =>{
     const updatedCart = this.state.cart
     updatedCart.push(cartItem);
-    localStorage.setItem("cart", JSON.stringify(this.state.cart));
+    sessionStorage.setItem("cart", JSON.stringify(this.state.cart));
     this.setState({cart: updatedCart}, ()=> console.log('cart:', this.state.cart))
 };
 
