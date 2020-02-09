@@ -19,12 +19,12 @@ class ItemPage extends React.Component {
             items: [],
             cart: []
          }
-     
     }
 
 addToCart = (cartItem) =>{
     const updatedCart = this.state.cart
-    updatedCart.push(cartItem)
+    updatedCart.push(cartItem);
+    localStorage.setItem("cart", JSON.stringify(this.state.cart));
     this.setState({cart: updatedCart}, ()=> console.log('cart:', this.state.cart))
 };
 
@@ -34,14 +34,13 @@ addToCart = (cartItem) =>{
         this.loadSoaps();
       }
     
-      loadSoaps = ()  => {
+    loadSoaps = ()  => {
         API.getSoaps()
           .then(res => {
             this.setState({
                 items: res.data
                 //  }, () => console.log('all products:', this.state.items))
                  })
-
             }, 
           )
           .catch(err => console.log(err));

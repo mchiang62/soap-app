@@ -1,6 +1,4 @@
-//import React from 'react';
 import React from "react";
-
 import './Item.css';
 import '../App.js';
 
@@ -36,10 +34,5 @@ function Item(props) {
         </div>
   </div>
   )};
-
-// Item.propTypes = {
-//     item: PropTypes.object.isRequired,
-//     children: PropTypes.node
-// };
 
 export default Item;

@@ -6,22 +6,51 @@ import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import './CartPage.css';
-
-const EmptyCart = () => (
-<div>
-        <Navbar />
-        <Header />
-    <div className="CartPage-empty">
-        <br></br>
-        Your Shopping Cart is empty. That's sad. 
-        <br></br>
-        Your Cart lives to serve. Give it purpose — fill it with soap, soap, and more soap!
-
-    </div>
-</div>   
-  );
+import API from "../Utils/API";
 
 class CartPage extends React.Component{
+    constructor(props){
+        super(props) 
+          this.state = {
+           name:"",
+           price: "",
+           image:"",
+           key:"",
+           items: [],
+           cart: []
+        }
+}
+
+  componentDidMount() {
+    const cart = localStorage.getItem(cart);
+    this.setState({ cart });
+  }
+
+// loadSoaps = ()  => {
+//     API.getSoaps()
+//       .then(res => {
+//         this.setState({
+//             items: res.data
+//             //  }, () => console.log('all products:', this.state.items))
+//              })
+//         }, 
+//       )
+//       .catch(err => console.log(err));
+//   };
+
+    EmptyCart = () => (
+    <div>
+            <Navbar />
+            <Header />
+        <div className="CartPage-empty">
+            <br></br>
+            Your Shopping Cart is empty. That's sad. 
+            <br></br>
+            Your Cart lives to serve. Give it purpose — fill it with soap, soap, and more soap!
+        </div>
+    </div>   
+  );
+
     render(){
          console.log('cart ms', this.props);
     return(

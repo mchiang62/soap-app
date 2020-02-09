@@ -1,6 +1,6 @@
 //import React, { Component } from "react"
-import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -12,44 +12,11 @@ import './App.css';
 import CartPage from './Shopping/CartPage';
 import Admin from "./pages/Admin";
 
-// const summarizeCart = cart => {
-//   const groupedItems = cart.reduce((summary, item) => {
-//     summary[item.id] = summary[item.id] || {
-//       ...item,
-//       // count:0
-//     };
-//     summary[item.id].count++;
-
-//     return summary;
-//   }, {});
-
-//   return Object.values(groupedItems);
-// };
 
 const App = () => {
-  // const [cart, setCart] = useState([]);
-
-  // const addToCart = item => {
-  //   setCart(prevCart => [...prevCart, item])
-  //   console.log("item-id", item.id)
-  //   console.log("item-price", item.price);
-  //   //summarizeCart(cart)
-  // };
-
-  // const removeItem = item => {
-  //   let index = cart.findIndex(i => i.id === item.id);
-  //   if (index >= 0) {
-  //     // alert("Your Item has been deleted");
-  //     setCart(cart => {
-  //       const copy = [...cart];
-  //       copy.splice(index, 1);
-  //       return copy;
-  //     });
-  //     //summarizeCart(cart);
-  //   }
-  // };
   return (
     <div className="App">
+      <Router>
         <div className="App-Router fullWidth">
           {/* <Navbar /> */}
           <Switch>
@@ -61,12 +28,12 @@ const App = () => {
              <Route path="/contact_us" component={Contact} />
              <Route path="/products" component={ItemPage} />
              {/* <Route path="/products" render={(props) => (<ItemPage {...props} items={items} onAddToCart={addToCart} />)} /> */}
-
              <Route path="/register" component={Register} />
              <Route path="/login" component={Login} />
              {/* <Route component={NoMatch} /> */}
            </Switch>
          </div>
+        </Router>
     </div>
   );
 };
