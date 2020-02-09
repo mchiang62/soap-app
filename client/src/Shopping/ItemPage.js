@@ -1,92 +1,75 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Item from "./Item";
-import "./ItemPage.css";
+import React from 'react';
+import { Route } from "react-router-dom";
+import CartPage from '../Shopping/CartPage'
+//import PropTypes from 'prop-types';
+import Item from './Item';
+import './ItemPage.css';
 import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import API from "../Utils/API";
 
 class ItemPage extends React.Component {
-  state = { show: false };
+    constructor(props){
+         super(props) 
+           this.state = {
+            name:"",
+            price: "",
+            image:"",
+            key:"",
+            items: [],
+            cart: []
+         }
+    }
 
-  showModal = () => {
-    this.setState({ show: true });
-  };
+addToCart = (cartItem) =>{
+    const updatedCart = this.state.cart
+    updatedCart.push(cartItem);
+    sessionStorage.setItem("cart", JSON.stringify(this.state.cart));
+    this.setState({cart: updatedCart}, ()=> console.log('cart:', this.state.cart))
+};
 
-  hideModal = () => {
-    this.setState({ show: false });
-  };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      cart: []
-    };
-  }
-  // function ItemPage({ items, onAddToCart }) {
-  componentDidMount() {
-    this.loadSoaps();
-  }
-  loadSoaps = () => {
-    API.getSoaps()
-      .then(res => {
-        this.setState({ items: res.data });
-        console.log("data", res.data);
-      })
-      .catch(err => console.log(err));
-  };
-  render() {
-    return (
-      <main>
+// function ItemPage({ items, onAddToCart }) {
+    componentDidMount() {
+        this.loadSoaps();
+      }
+    
+    loadSoaps = ()  => {
+        API.getSoaps()
+          .then(res => {
+            this.setState({
+                items: res.data
+                //  }, () => console.log('all products:', this.state.items))
+                 })
+            }, 
+          )
+          .catch(err => console.log(err));
+      };
+
+    render () {   
+        return (
         <div className="ItemPage-items">
-          <Navbar />
-          <Header />
-          <div className="row">
-            <Modal show={this.state.show} handleClose={this.hideModal}>
-              <p>Modal</p>
-              <p>Data</p>
-            </Modal>
-
+            <Navbar />
+            <Header />
+            <div className="row">
             {this.state.items.map(item => (
-              <li key={item.id} className="ItemPage-item">
-                <Item item={item}>
-                  <button
-                    className="Item-addToCart"
-                    onClick={this.props.onAddToCart}
-                  >
-                    Add to Cart
-                  </button>
-
-                  {/* this.showModal needs fire at the same when the item is added to cart - the button below is just to show that it works*/}
-                  <button type="button" onClick={this.showModal}>
-                    Open Modal
-                  </button>
-                </Item>
-              </li>
-            ))}
-          </div>
+                <li key={item.id} className="ItemPage-item">
+                    <Item 
+                       id={item._id}
+                       name={item.name}
+                       image={item.image}
+                       price={item.price}
+                       item={item}
+                       addToCart={this.addToCart}
+                       />
+        
+                </li>
+             ) )}
         </div>
-      </main>
-    );
-  }
-}
-
-const Modal = ({ handleClose, show, children }) => {
-  const showHideClassName = show ? "modal display-block" : "modal display-none";
-
-  return (
-    <div className={showHideClassName}>
-      <section className="modal-main">
-        {children}
-        <button onClick={handleClose}>Close</button>
-      </section>
-    </div>
-  );
+        
+        </div>
+    )}
 };
 
-ItemPage.propTypes = {
-  items: PropTypes.array.isRequired,
-  onAddToCart: PropTypes.func.isRequired
-};
+
 export default ItemPage;

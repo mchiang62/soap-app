@@ -139,25 +139,25 @@ const photoSeed = [
     }
 ]
 
-const messageSeed = [
-    {
-        name: "Dan",
-        email: "Dan@dan.com",
-        note: "Here's a seeded note to start with"
-    }
-]
+// const messageSeed = [
+//     {
+//         name: "Dan",
+//         email: "Dan@dan.com",
+//         note: "Here's a seeded note to start with"
+//     }
+// ]
 
-// db.Soap
-//     .remove({})
-//     .then(() => db.Soap.collection.insertMany(soapSeed))
-//     .then(data => {
-//         console.log(data.result.n + " records inserted into Soaps!");
-//         //process.exit(0);
-//     })
-//     .catch(err => {
-//         console.error(err);
-//         process.exit(1);
-//     });
+db.Soap
+    .remove({})
+    .then(() => db.Soap.collection.insertMany(soapSeed))
+    .then(data => {
+        console.log(data.result.n + " records inserted into Soaps!");
+        //process.exit(0);
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    });
 
 // db.Photo 
 //     .remove({})
@@ -171,14 +171,25 @@ const messageSeed = [
 //         process.exit(1);
 //     });
 
-db.Message
-    .remove({})
-    .then(() => db.Message.collection.insertMany(messageSeed))
-    .then(data => {
-        console.log(data.result.n + " records inserted into Messages!");
-        process.exit(0);
-    })
-    .catch(err => {
-        console.error(err);
-        process.exit(1);
-    })
+// db.Message
+//     .remove({})
+//     .then(() => db.Message.collection.insertMany(messageSeed))
+//     .then(data => {
+//         console.log(data.result.n + " records inserted into Messages!");
+//         process.exit(0);
+//     })
+//     .catch(err => {
+//         console.error(err);
+//         process.exit(1);
+//     })
+
+// db.Message
+//     db.Message.collection.insertMany(messageSeed)
+//     .then(data => {
+//         console.log(data.result.n + " records inserted into Messages!");
+//         process.exit(0);
+//     })
+//     .catch(err => {
+//         console.error(err);
+//         process.exit(1);
+//     })

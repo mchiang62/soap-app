@@ -20,33 +20,25 @@
       background-color: rgb(128, 98, 69);
 }
 
-button .CartItem-addOne{
+.CartItem-addOne,
+.CartItem-removeOne{
     border-style: solid;
-    padding: 5px 10px;
+    padding: 5px 5px;
     background: #fff5;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-size: 14px;
     border: 2px solid #36322c;
     border-radius: 3px;
     cursor: pointer;
 }
-
-button .CartItem-removeOne{
-    border-style: solid;
-    padding: 5px 10px;
-    background: #fff;
-    margin-bottom: 5px;
-    font-size: 14px;
-    border: 2px solid #36322c;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
 .CartHeader{
     padding: 5px;
 }
-
-
 .CartPage{
     text-align: center;
+}
+.checkoutButton{
+    margin-left: 10px;
 }
