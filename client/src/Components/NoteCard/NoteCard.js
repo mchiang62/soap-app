@@ -3,16 +3,13 @@ import "./NoteCard.css";
 
 function NoteCard(props) {
     return (
-        <div className="card">
+        <div className="card noteCard">
             <div className="content">
-                <ul>
-                    <li>
-                        <p>{props.noteText}</p>
-                    </li>
-                </ul>
-                    <li>
-                        <strong>--{props.name}</strong>
-                    </li>
+               
+                        <p className="noteText">"{props.noteText}"</p>
+                
+                        <strong className="noteName">--{props.name}</strong>
+
             </div>
         </div>
     );

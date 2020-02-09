@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import Wrapper from "../Components/Wrapper/Wrapper";
+import Parallax from "../Components/Parallax/Parallax";
 import API from "../Utils/API";
 import {Input, TextArea, FormBtn} from "../Components/AddMessageForm";
 import NoteCard from "../Components/NoteCard/NoteCard";
@@ -63,6 +64,8 @@ class Contact extends Component {
                             ))}
                         </div>
                     </div>
+                    <br/>
+                    <div className="container">
                 <form>
                     <Input
                         value={this.state.name}
@@ -88,7 +91,11 @@ class Contact extends Component {
                             Send your message!
                         </FormBtn>
                 </form>
+                </div>
                 </Wrapper>
+                <Parallax pic="https://ca-times.brightspotcdn.com/dims4/default/75faa2e/2147483647/strip/true/crop/2048x1203+0+0/resize/840x493!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ff7%2F4f%2F34d9369fc82d220bd49c751d8b36%2Fsdut-california-poppies-and-other-na-20160905"
+                height="400px"/>
+                <Footer/>
             </div>
         )
     }
