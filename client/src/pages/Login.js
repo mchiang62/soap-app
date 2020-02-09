@@ -12,6 +12,8 @@ class Login extends Component {
                 <div className="Login">
                     <LoginCard />
                 </div>
+                <br />
+                <br />
                 <Footer />
             </div>
         );

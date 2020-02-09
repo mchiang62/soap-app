@@ -9,12 +9,12 @@ function Footer() {
   return (
     <div className="card footer">
       <div className="card-body">
-        <h4 className="card-title footerH"><strong>Browning Soaps</strong></h4>
+        <h4 className="card-title footerH"><strong>Browning's Soap</strong></h4>
         <br />
         <p className="card-text footerP">
           Thank you for visiting! Check back weekly for new scents!
           <br />
-         Follow us on <a href="https://www.facebook.com/browningssoap"> 
+         Follow us on <a href="https://www.facebook.com/browningssoap" target="_blank"> 
         <FontAwesomeIcon className="add-classnames-like-this" icon={faFacebookF} fixedWidth />
         </a> for our latest updates!
         <br />
