@@ -11,11 +11,14 @@
 .footer {
   width: 100% !important;
   margin-bottom: -10;
-  /* text-align: center; */
+  height: auto !important;
 }
 
 .footerP, .footerH {
   text-align: center;
+  font-family: 'Patrick Hand', cursive;
 }
+
+
 
 

@@ -8,6 +8,8 @@ nav.navbar.navbar-default {
 }
 
 .navbar {
-  border-bottom: thick solid #78c2ad;
+  /* border-bottom: thick solid #78c2ad; */
   width: 100%;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 24px;
 }
