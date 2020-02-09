@@ -5,7 +5,6 @@ import Header from "../Components/Header/Header";
 import CartItem from "../Shopping/CartItem";
 import './CartPage.css';
 
-
 class CartPage extends React.Component{
     constructor(){
        super() 
@@ -28,8 +27,6 @@ class CartPage extends React.Component{
     // };
 
     render(){
-     
-
         this.state.cart = JSON.parse(sessionStorage.getItem("cart"));
         //console.log("localstor",cart);
          console.log("displayCart",this.state.cart);
@@ -66,9 +63,7 @@ class CartPage extends React.Component{
                        image={item.image}
                        price={item.price}
                        item={item}
-                
                        />
-        
                 </li>
              ) )}
         </div>
