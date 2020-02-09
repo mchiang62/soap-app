@@ -1,7 +1,7 @@
 # Browning's Soaps
 
 This react app is a storefront to market and sell soaps made by the Browning's Soaps company.  These handmade, artisan soaps are lovingly crafted
-by a family in Northeast Georgia, and we saw their amazing product as an opportunity to create a react app from start to finish.  This app uses react, MongoDB, MongoDB Atlas, express, Node, Boostrap, and Passport.  With this app a user can browse the different soaps offered, and can add them to a cart for purchasing.  While the user cannot actually purchase the soaps at this stage, PayPal and Venmo integration are not far off with our completed shopping cart.  In addition to being useful for users, an administrator can add or remove soaps from the database at will.  Users can also leave messages for the business to let them know how much they love their product!
+by a family in West Georgia, and we saw their amazing product as an opportunity to create a react app from start to finish.  This app uses React, MongoDB, MongoDB Atlas, Expressjs, Nodejs, Boostrap, and Passport.  With this app a user can browse the different soaps offered, and can add them to a cart for purchasing.  While the user cannot actually purchase the soaps at this stage, PayPal and Venmo integration are not far off with our completed shopping cart.  In addition to being useful for users, an administrator can add or remove soaps from the database at will.  Users can also leave messages for the business to let them know how much they love their product!
 
 ## Getting Started
 
@@ -35,6 +35,7 @@ npm run seed
 This will seed your database with some starter information, which can be found in the seedDB file.  Once your database has been seeded and your node modules installed, you can spin up the app on your local machine.  To do this, first change directory back to the root directory of the repository, and then run:
 
 ...
+
 npm start
 ...
 
