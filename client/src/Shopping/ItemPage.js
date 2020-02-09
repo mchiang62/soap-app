@@ -9,16 +9,16 @@ import Header from "../Components/Header/Header";
 import API from "../Utils/API";
 
 class ItemPage extends React.Component {
-    // constructor(props){
-        // super(props) 
-           state = {
+    constructor(props){
+         super(props) 
+           this.state = {
             name:"",
             price: "",
             image:"",
             key:"",
             items: [],
             cart: []
-        // }
+         }
      
     }
 
@@ -47,16 +47,12 @@ addToCart = (cartItem) =>{
           .catch(err => console.log(err));
       };
 
-    
-
-    render () {  
-        
+    render () {   
         return (
-
         <div className="ItemPage-items">
             <Navbar />
             <Header />
-            <Route  path="/cart" render={(props) => <CartPage {...props} stuff={"YES"} items={this.state.cart} />} />
+            <Route path="/cart" render={(props) => <CartPage {...props} items={this.state.cart} />} />
             <div className="row">
             {this.state.items.map(item => (
                 <li key={item.id} className="ItemPage-item">
@@ -68,7 +64,7 @@ addToCart = (cartItem) =>{
                        item={item}
                        addToCart={this.addToCart}
                        />
-        }
+        
                 </li>
              ) )}
         </div>
@@ -77,9 +73,5 @@ addToCart = (cartItem) =>{
     )}
 };
 
-// ItemPage.propTypes = {
-//     items: PropTypes.array.isRequired,
-//     onAddToCart:PropTypes.func.isRequired
-// };
 
 export default ItemPage;

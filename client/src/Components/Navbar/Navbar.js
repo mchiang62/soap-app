@@ -62,7 +62,8 @@ function Navbar() {
                     </li>
                     <li className="list-inline-item">
                         <Link to="/cart" className={window.location.pathname === "/cart"}>
-Cart                        </Link>
+                            <FontAwesomeIcon className="add-classnames-like-this" icon={faShoppingCart} fixedWidth />
+                        </Link>
                     </li>
                 </ul>
 

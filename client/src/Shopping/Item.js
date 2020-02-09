@@ -1,5 +1,5 @@
 //import React from 'react';
-import React, { useState } from "react";
+import React from "react";
 
 import './Item.css';
 import '../App.js';
@@ -35,8 +35,7 @@ function Item(props) {
           </ul>
         </div>
   </div>
-  )
-};
+  )};
 
 // Item.propTypes = {
 //     item: PropTypes.object.isRequired,
