@@ -37,17 +37,12 @@ class CartPage extends React.Component {
         <Navbar />
 
         <Parallax
-          pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
-          height="275px"
-        >
-          <br />
-          <br />
-          <br />
-          <h1>Your Cart</h1>
-        </Parallax>
+          pic="https://www.tovarnaorganika.si/files/507a47762fb29abf05826b44b72e79f3/products/ade898fb4bbd221e757cb5644faaa8ae/soaps-ingredients.jpg"
+          height="450px"
+        />
 
         <div className="CartHeader">
-          <h2> Your Shopping Cart</h2>
+          <h2> My Shopping Cart</h2>
           <h2 className="CartPage-total">
             Total Amount: ${4 * this.state.cart.length}.00
           </h2>
@@ -78,19 +73,21 @@ class CartPage extends React.Component {
           <hr></hr>
         </div>
 
-        <div className="ItemPage-items">
-          <div className="row">
-            {this.state.cart.map(item => (
-              <li key={item.id} className="ItemPage-item">
-                <CartItem
-                  id={item._id}
-                  name={item.name}
-                  image={item.image}
-                  price={item.price}
-                  item={item}
-                />
-              </li>
-            ))}
+        <div className="container">
+          <div className="ItemPage-items">
+            <div className="row">
+              {this.state.cart.map(item => (
+                <li key={item.id} className="ItemPage-item">
+                  <CartItem
+                    id={item._id}
+                    name={item.name}
+                    image={item.image}
+                    price={item.price}
+                    item={item}
+                  />
+                </li>
+              ))}
+            </div>
           </div>
         </div>
       </div>
