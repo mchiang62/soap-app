@@ -52,7 +52,7 @@ class ItemPage extends React.Component {
       <div className="ItemPage-items">
         <Navbar />
         <Parallax
-          pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
+          pic="https://media.freestocktextures.com/cache/7c/0b/7c0b7d248141ad087faae0420c8c5182.jpg"
           height="275px"
         >
           <br />
@@ -80,8 +80,8 @@ class ItemPage extends React.Component {
 
 
         <Parallax
-          pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
-          height="300px"
+          pic="https://media.freestocktextures.com/cache/7c/0b/7c0b7d248141ad087faae0420c8c5182.jpg"
+          height="400px"
         >
         </Parallax>
 

@@ -136,7 +136,7 @@ class Admin extends Component {
         </div>
         <Parallax
           pic="https://i.ytimg.com/vi/4FM9r-47ESo/maxresdefault.jpg"
-          height="300px"
+          height="350px"
         >
         </Parallax>
 
@@ -159,7 +159,7 @@ class Admin extends Component {
         </div>
         <Parallax
           pic="https://i.ytimg.com/vi/4FM9r-47ESo/maxresdefault.jpg"
-          height="400px"
+          height="350px"
         >
         </Parallax>
         <Footer />

@@ -11,8 +11,8 @@ class Home extends Component {
         <Navbar />
 
         <Parallax
-          pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
-          height="200px"
+          pic="https://www.lifeinbalanceservices.com/wp-content/uploads/2015/12/bright-leaves-fade.jpg"
+          height="150px"
         >
           <br />
           <br />
@@ -36,7 +36,7 @@ class Home extends Component {
           />
 
           <Parallax
-            pic="https://www.tokkoro.com/picsup/3034494-almost-spring_blown-out_faded_flower.jpg"
+            pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
             height="400px"
           />
 
