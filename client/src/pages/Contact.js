@@ -48,59 +48,64 @@ class Contact extends Component {
       <div className="contact">
         <Navbar />
         <Parallax
-          pic="https://ca-times.brightspotcdn.com/dims4/default/75faa2e/2147483647/strip/true/crop/2048x1203+0+0/resize/840x493!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ff7%2F4f%2F34d9369fc82d220bd49c751d8b36%2Fsdut-california-poppies-and-other-na-20160905"
-          height="300px">
-        <br />
-        <br />
-        <br />
-        <h1>Please leave us a message to tell us anything!</h1>
-        </Parallax>
-          <div className="container">
-            <div className="row">
-              {this.state.notes.map(note => (
-                <NoteCard
-                  id={note.id}
-                  key={note.id}
-                  name={note.name}
-                  noteText={note.noteText}
-                />
-              ))}
-            </div>
-          </div>
+          pic="https://live.staticflickr.com/4656/27932518369_914995be80_b.jpg"
+          height="300px"
+        >
           <br />
-          <div className="container">
-            <form>
-              <Input
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                name="name"
-                placeholder="Name"
+          <br />
+          <br />
+          <h1>Please leave us a message to tell us anything!</h1>
+        </Parallax>
+        <br />
+        <br />
+        <div className="container">
+          <div className="row">
+            {this.state.notes.map(note => (
+              <NoteCard
+                id={note.id}
+                key={note.id}
+                name={note.name}
+                noteText={note.noteText}
               />
-              <Input
-                value={this.state.email}
-                onChange={this.handleInputChange}
-                name="email"
-                placeholder="Email Address"
-              />
-              <TextArea
-                value={this.state.noteText}
-                onChange={this.handleInputChange}
-                name="noteText"
-                placeholder="Type your message here!"
-              />
-              <FormBtn
-                disabled={
-                  !(this.state.name && this.state.email && this.state.noteText)
-                }
-                onClick={this.handleFormSubmit}
-              >
-                Send your message!
-              </FormBtn>
-            </form>
+            ))}
           </div>
+        </div>
+        <br />
+        <div className="container">
+          <form>
+            <Input
+              value={this.state.name}
+              onChange={this.handleInputChange}
+              name="name"
+              placeholder="Name"
+            />
+            <Input
+              value={this.state.email}
+              onChange={this.handleInputChange}
+              name="email"
+              placeholder="Email Address"
+            />
+            <TextArea
+              value={this.state.noteText}
+              onChange={this.handleInputChange}
+              name="noteText"
+              placeholder="Type your message here!"
+            />
+            <FormBtn
+              disabled={
+                !(this.state.name && this.state.email && this.state.noteText)
+              }
+              onClick={this.handleFormSubmit}
+            >
+              Send your message!
+            </FormBtn>
+          </form>
+          <br />
+          <br />
+        </div>
         <Parallax
-          pic="https://ca-times.brightspotcdn.com/dims4/default/75faa2e/2147483647/strip/true/crop/2048x1203+0+0/resize/840x493!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ff7%2F4f%2F34d9369fc82d220bd49c751d8b36%2Fsdut-california-poppies-and-other-na-20160905"
-          height="275px"
+          pic="https://live.staticflickr.com/4656/27932518369_914995be80_b.jpg"
+          height="350px"
         />
         <Footer />
       </div>

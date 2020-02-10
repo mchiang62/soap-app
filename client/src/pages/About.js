@@ -10,14 +10,10 @@ class About extends Component {
       <div className="about">
         <Navbar />
         <Parallax
-          pic="https://free4kwallpapers.com/uploads/originals/2019/10/31/mountain-scenery-art-wallpaper.jpg"
-          height="300px"
-        >
-          <br />
-          <br />
-          <br />
-          <h1>About Us</h1>
-        </Parallax>
+          pic="https://live.staticflickr.com/65535/49439532676_e1279b9603.jpg"
+          height="400px"
+        />
+
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -46,10 +42,9 @@ class About extends Component {
         </div>
 
         <Parallax
-          pic="https://free4kwallpapers.com/uploads/originals/2019/10/31/mountain-scenery-art-wallpaper.jpg"
-          height="275px"
-        ></Parallax>
-
+          pic="https://live.staticflickr.com/65535/49439060693_6245ea1b04.jpg"
+          height="400px"
+        />
         <Footer />
       </div>
     );
