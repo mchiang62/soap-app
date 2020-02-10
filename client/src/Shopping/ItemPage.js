@@ -81,7 +81,7 @@ class ItemPage extends React.Component {
 
         <Parallax
           pic="https://media.freestocktextures.com/cache/7c/0b/7c0b7d248141ad087faae0420c8c5182.jpg"
-          height="400px"
+          height="350px"
         >
         </Parallax>
 

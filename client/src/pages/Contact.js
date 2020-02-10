@@ -105,7 +105,7 @@ class Contact extends Component {
         </div>
         <Parallax
           pic="https://live.staticflickr.com/4656/27932518369_914995be80_b.jpg"
-          height="300px"
+          height="350px"
         />
         <Footer />
       </div>
