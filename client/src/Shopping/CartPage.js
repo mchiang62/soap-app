@@ -9,7 +9,12 @@ class CartPage extends React.Component {
   constructor(props) {
     super(props);    
     this.state = {
-      cart:[],
+      name: "",
+      price: "",
+      image: "",
+      key: "",
+      items: [],
+      cart: []
 
     };
 };
@@ -28,10 +33,9 @@ componentDidMount(){
 }
   
  
-removeItem = (item)=>{
-    
+removeItem = item =>{
     this.setState({
-        cart: this.state.cart.splice(0,1)
+        cart: this.state.cart.splice(this.state.cart.indexOf(item),1)
     })
     console.log(item, "item")
   }
@@ -88,10 +92,8 @@ removeItem = (item)=>{
                     image={item.image}
                     price={item.price}
                     item={item}
+                    removeItem={this.removeItem}
                   />  
-    <button className="Item-remove"
-            onClick={() => this.removeItem(item, index)}>Remove Item
-    </button>          
                 </li>
               ))}
             </div>

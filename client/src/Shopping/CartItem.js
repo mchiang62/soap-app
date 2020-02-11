@@ -17,10 +17,10 @@ function CartItem(props){
             <li>
               <strong>Price:</strong> {props.price}.00
             </li>
-            {/* <button
+            <button
               className="Item-remove"
-              onClick={() => this.triggerDelete(props.id)}>Remove Item
-            </button> */}
+              onClick={() => props.removeItem(props.item)}>Remove Item
+            </button>
           </ul>
         </div>
   </div>
