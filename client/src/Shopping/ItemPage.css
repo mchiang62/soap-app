@@ -2,17 +2,20 @@
     margin: 0;
     padding: 0;
     max-width: 100%;
+    font-family: 'Alike', serif;
 }
 
 .ItemPage-items li{
     list-style: none;
     margin-bottom: 20px;
+    font-family: 'Alike', serif;
 }
 
 button.Item-addToCart{
     position: relative;
     margin-left: 30%;
     margin-right: 30%;
+    font-family: 'Alike', serif;
 }
 
 .modal {
@@ -40,4 +43,10 @@ button.Item-addToCart{
   
   .display-none {
     display: none;
+  }
+
+  .ParallaxHead{
+    font-family: 'Alike', serif;
+    font-size: 36px;
+    font: white;
   }

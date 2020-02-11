@@ -18,22 +18,19 @@ class About extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="card mb-3 w-75 about-info">
-                <div className="card-header">The Browning's</div>
+                {/* <div className="card-header">About Us</div> */}
                 <div className="card-body">
-                  <h4 className="card-title">How we got started..</h4>
+                  <h4 className="card-title">How we got started....</h4>
                   <p className="card-text">
-                    Zombie ipsum reversus ab viral inferno, nam rick grimes
-                    malum cerebro. De carne lumbering animata corpora quaeritis.
-                    Summus brains sit​​, morbo vel maleficia? De apocalypsi
-                    gorger omero undead survivor dictum mauris. Hi mindless
-                    mortuis soulless creaturas, imo evil stalking monstra
-                    adventus resi dentevil vultus comedat cerebella viventium.
-                    Qui animated corpse, cricket bat max brucks terribilem
-                    incessu zomby. The voodoo sacerdos flesh eater, suscitat
-                    mortuos comedere carnem virus. Zonbi tattered for solum
-                    oculi eorum defunctis go lum cerebro. Nescio brains an
-                    Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth
-                    eliv ingdead.
+                    In 2016, we decided that we were not satisfied with the quality of beauty and household products that were available to our family. 
+                    All of the artifical chemicals and fillers were very barsh and often caused rashes and breakouts on our skin. It also did not help that 
+                    we live in a very small town in Northwest Georgia, so our accessibility to the nearest all-natural, organic healthfood store was limited. 
+                    So, we decided to do it ourselves!
+                  </p>
+                  <p>
+                    After extensive research on the best natural ingredients, we formulated our first bar of soap  in our kitchen. And, as they say, the rest is history! Our soaps are 
+                    made with coconut oil, essential oils, and love. We are proud to be a small family run business, providing families like ours with products that you can feel good about. 
+                    From our family to yours!
                   </p>
                 </div>
               </div>

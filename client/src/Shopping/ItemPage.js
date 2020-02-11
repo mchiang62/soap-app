@@ -58,7 +58,7 @@ class ItemPage extends React.Component {
           <br />
           <br />
           <br />
-          <h1>Products</h1>
+          <h1 className="ParallaxHead">Products</h1>
         </Parallax>
 
         <div className="container">
