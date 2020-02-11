@@ -6,7 +6,8 @@ function HomeCards(props) {
       <div className="col-6">
         <br />
         <br />
-        <h1>{props.header}</h1>
+        <br />
+        <h2>{props.header}</h2>
       </div>
       <div className="col-4">
         <br />

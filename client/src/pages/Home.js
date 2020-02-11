@@ -49,10 +49,10 @@ class Home extends Component {
 
         <div className="homecontainer">
           <HomeCards
-            header="Made with natural ingredients"
+            header="All natural soaps made with saponified coconut oil and olive oil, essential or fragrance oils, and natural colorants "
             soapURL="https://live.staticflickr.com/65535/49439060548_2e9b890f50_b.jpg"
           />
-
+          <br />
           <Parallax
             pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
             height="400px"
@@ -62,18 +62,26 @@ class Home extends Component {
             <div className="col-6">
               <br />
               <br />
+              <br />
               <img
-                src="https://live.staticflickr.com/65535/49439060548_2e9b890f50_b.jpg"
+                src="https://live.staticflickr.com/65535/49439060678_6f96ebb95b.jpg"
                 alt="barsoaps"
-                height="300"
-                width="400"
+                height="450"
+                width="375"
               />
             </div>
             <div className="col-4">
               <br />
               <br />
-              <h1>description</h1>
               <br />
+              <h2>100% handmade using natural ingredients that leaves your skin gentle and healthy</h2>
+              <br />
+              <img
+                src="https://live.staticflickr.com/65535/49439757797_e4785320f0_b.jpg"
+                alt="barsoaps"
+                height="350"
+                width="325"
+              />
             </div>
           </div>
 
@@ -88,7 +96,7 @@ class Home extends Component {
           />
 
           <Parallax
-            pic="https://www.tokkoro.com/picsup/3034494-almost-spring_blown-out_faded_flower.jpg"
+            pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
             height="400px"
           />
         </div>
