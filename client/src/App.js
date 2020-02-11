@@ -23,7 +23,8 @@ const App = () => {
              <Route exact path="/home" component={Home} />
              <Route path="/about_us" component={About} />
              <Route path="/contact_us" component={Contact} />
-             <Route path="/products" component={ItemPage} />             <Route path="/register" component={Register} />
+             <Route path="/products" component={ItemPage} />             
+             <Route path="/register" component={Register} />
              <Route path="/login" component={Login} />
              <Route path="/admin" component={Admin}/>
              {/* <Route component={NoMatch} /> */}
