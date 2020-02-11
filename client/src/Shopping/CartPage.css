@@ -34,13 +34,15 @@
     cursor: pointer;
 }
 .CartHeader{
+    margin-top: 25px;
     padding: 5px;
     font-family: 'Alike', serif;
+    background-color: rgb(238, 234, 234);
 }
 .CartPage{
     text-align: center;
     font-family: 'Alike', serif;
 }
 .checkoutButton{
-    margin-left: 10px;
+    text-align: center;
 }

@@ -50,3 +50,8 @@ button.Item-addToCart{
     font-size: 36px;
     font: white;
   }
+
+  .Item-remove{
+   margin-left:15%;
+   margin-right: 15%;
+  }
