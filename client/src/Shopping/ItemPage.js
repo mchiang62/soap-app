@@ -8,8 +8,17 @@ import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 import Parallax from "../Components/Parallax/Parallax";
 import API from "../Utils/API";
+import Modal from "../Components/Modals/Modals";
 
 class ItemPage extends React.Component {
+  state = { show: false };
+  showModal = () => {
+    this.setState({ show: true });
+  };
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -26,9 +35,8 @@ class ItemPage extends React.Component {
     const updatedCart = this.state.cart;
     updatedCart.push(cartItem);
     sessionStorage.setItem("cart", JSON.stringify(this.state.cart));
-    this.setState({ cart: updatedCart }, () =>
-      console.log("cart:", this.state.cart)
-    );
+    this.setState({ cart: updatedCart });
+    this.showModal();
   };
 
   // function ItemPage({ items, onAddToCart }) {
@@ -63,8 +71,14 @@ class ItemPage extends React.Component {
 
         <div className="container">
           <div className="row">
+            <Modal show={this.state.show} handleClose={this.hideModal}>
+              <br />
+              <h4><strong>Added to Cart</strong></h4>
+              <br />
+            </Modal>
+
             {this.state.items.map(item => (
-              <li key={item.id} className="ItemPage-item">
+              <li key={item._id} className="ItemPage-item">
                 <Item
                   id={item._id}
                   name={item.name}
@@ -78,13 +92,10 @@ class ItemPage extends React.Component {
           </div>
         </div>
 
-
         <Parallax
           pic="https://media.freestocktextures.com/cache/7c/0b/7c0b7d248141ad087faae0420c8c5182.jpg"
           height="350px"
-        >
-        </Parallax>
-
+        ></Parallax>
 
         <Footer />
       </div>
