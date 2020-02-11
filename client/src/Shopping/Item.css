@@ -3,6 +3,7 @@
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
     padding: 10px;
+    font-family: 'Alike', serif;
 }
 
 .Item-image{
@@ -16,10 +17,7 @@
     font-weight:bold;
     margin-bottom: 0.4em;
 }
-.Item-title{
-    font-weight: bold;
-    margin-bottom: 0.4em;
-}
+
 .Item-price{
     text-align: right;
     font-size: 14px;
@@ -58,6 +56,7 @@
     width: 325px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     text-align: left;
+    font-family: 'Alike', serif;
    
     
   }
@@ -73,7 +72,7 @@
   }
   
   .card > .content {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Alike', serif;
     font-size: 15px;
     color: black;
   }

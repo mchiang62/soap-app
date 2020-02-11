@@ -1,24 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import './ItemPage.css';
 import '../App.js';
 
 function CartItem(props){
-  const [cart, setCart] = useState([]);
-
-  const removeItem = props => {
-    let index = cart.findIndex(i => i.id === props.id);
-    if (index >= 0) {
-      // alert("Your Item has been deleted");
-      setCart(cart => {
-        const copy = [...cart];
-        copy.splice(index, 1);
-        return copy;
-      });
-    }
-  };
-  console.log("cartprops", {props})
-
-
+ //console.log({props}, "props")
   return(
     <div className="Item card">
         <div className="img-container">
@@ -34,7 +19,7 @@ function CartItem(props){
             </li>
             <button
               className="Item-remove"
-              onClick={() => removeItem(props.id)}>Remove Item
+              onClick={() => props.removeItem(props.item)}>Remove Item
             </button>
           </ul>
         </div>

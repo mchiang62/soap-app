@@ -6,33 +6,44 @@ import CartItem from "../Shopping/CartItem";
 import "./CartPage.css";
 
 class CartPage extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);    
     this.state = {
+      name: "",
+      price: "",
+      image: "",
+      key: "",
+      items: [],
       cart: []
+
     };
-  }
+};
 
-  // EmptyCart(){
-  //     <div>
-  //             <Navbar />
-  //             <Header />
-  //         <div className="CartPage-empty">
-  //             <br></br>
-  //             Your Shopping Cart is empty. That's sad.
-  //             <br></br>
-  //             Your Cart lives to serve. Give it purpose — fill it with soap, soap, and more soap!
-  //         </div>
-  //     </div>
-  // };
+//   handleSubmit(e) {
+//     e.preventDefault();
+//   };
 
-  render() {
+componentDidMount(){
     this.state.cart = JSON.parse(sessionStorage.getItem("cart"));
-    //console.log("localstor",cart);
-    console.log("displayCart", this.state.cart);
+    console.log("fromstorage", this.state.cart);
 
+    this.setState({
+        cart: this.state.cart
+    }, () => console.log(this.state.cart, "newcartstate"))
+}
+  
+ 
+removeItem = item =>{
+    this.setState({
+        cart: this.state.cart.splice(this.state.cart.indexOf(item),1)
+    })
+    console.log(item, "item")
+  }
+ 
+  render() {
     return (
       // this.state.cart.length === 0 ? {EmptyCart} :
+      
       <div className="CartPage-items">
         <Navbar />
 
@@ -57,10 +68,9 @@ class CartPage extends React.Component {
               }
             >
               <button
-                className="btn btn-primary my-2 my-sm-0"
+                className="btn btn-dark my-2 my-sm-0"
                 href="/cart"
-                type="submit"
-              >
+                type="submit">
                 Checkout
               </button>
             </Link>
@@ -73,10 +83,9 @@ class CartPage extends React.Component {
               }
             >
               <button
-                className="btn btn-primary my-2 my-sm-0"
+                className="btn btn-dark my-2 my-sm-0"
                 href="/cart"
-                type="submit"
-              >
+                type="submit">
                 Continue Shopping
               </button>
             </Link>
@@ -87,15 +96,16 @@ class CartPage extends React.Component {
         <div className="container">
           <div className="ItemPage-items">
             <div className="row">
-              {this.state.cart.map(item => (
-                <li key={item.id} className="ItemPage-item">
+              {this.state.cart.map((item,index) => (
+                <li key={index} className="ItemPage-item">
                   <CartItem
                     id={item._id}
                     name={item.name}
                     image={item.image}
                     price={item.price}
                     item={item}
-                  />
+                    removeItem={this.removeItem}
+                  />  
                 </li>
               ))}
             </div>
@@ -103,7 +113,7 @@ class CartPage extends React.Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
 export default CartPage;
