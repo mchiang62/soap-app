@@ -80,9 +80,9 @@ function Navbar() {
         </ul>
 
         <ul className="list-inline">
-          <li className="list-inline-item" id="welcome-text">
+          {/* <li className="list-inline-item" id="welcome-text">
             Welcome,{" "}
-          </li>
+          </li> */}
           <li className="list-inline-item">
             <Link
               to="/register"

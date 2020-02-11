@@ -1,7 +1,7 @@
 .noteCard {
     background: #fff;
     border-radius: 2px;
-    height: 150px !important;
+    height: auto !important;
     margin: 1rem;
     position: relative;
     width: 60px;

@@ -54,7 +54,7 @@ class Contact extends Component {
           <br />
           <br />
           <br />
-          <h1>Please leave us a message to tell us anything!</h1>
+          <h1 className="text-dark"><strong>Please leave us a message to tell us anything!</strong></h1>
         </Parallax>
         <br />
         <br />
