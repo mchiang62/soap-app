@@ -35,9 +35,11 @@
 }
 .CartHeader{
     padding: 5px;
+    font-family: 'Alike', serif;
 }
 .CartPage{
     text-align: center;
+    font-family: 'Alike', serif;
 }
 .checkoutButton{
     margin-left: 10px;
