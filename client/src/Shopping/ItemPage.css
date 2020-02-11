@@ -45,8 +45,13 @@ button.Item-addToCart{
     display: none;
   }
 
-  .ParallaxHead{
+h1.ParallaxHead{
     font-family: 'Alike', serif;
     font-size: 36px;
     font: white;
+  }
+
+  .Item-remove{
+   margin-left:15%;
+   margin-right: 15%;
   }

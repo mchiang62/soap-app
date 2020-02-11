@@ -16,10 +16,10 @@ class About extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
-              <div className="card mb-3 w-75 about-info">
+            <div className="col-md-6">
+              <div className="h-auto d-inline-block about-info">
                 {/* <div className="card-header">About Us</div> */}
-                <div className="card-body">
+                <div className="card-body h-auto d-inline-block">
                   <h4 className="card-title">How we got started....</h4>
                   <p className="card-text">
                     In 2016, we decided that we were not satisfied with the quality of beauty and household products that were available to our family. 
@@ -30,10 +30,13 @@ class About extends Component {
                   <p>
                     After extensive research on the best natural ingredients, we formulated our first bar of soap  in our kitchen. And, as they say, the rest is history! Our soaps are 
                     made with coconut oil, essential oils, and love. We are proud to be a small family run business, providing families like ours with products that you can feel good about. 
-                    From our family to yours!
+                    From our family to yours! 
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="col-md-4">
+              <div className="fb-post p-3" data-href="https://www.facebook.com/browningssoap/posts/1216575861869222"></div>
             </div>
           </div>
         </div>

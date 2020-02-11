@@ -53,6 +53,7 @@ removeItem = item =>{
         />
 
         <div className="CartHeader">
+            <br></br>
           <h2> My Shopping Cart</h2>
           <h2 className="CartPage-total">
             Total Amount: ${4 * this.state.cart.length}.00
