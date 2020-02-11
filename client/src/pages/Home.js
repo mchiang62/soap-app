@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import HomeCards from "../Components/HomeCards/HomeCards";
 import Footer from "../Components/Footer/Footer";
 import Parallax from "../Components/Parallax/Parallax";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
@@ -12,7 +13,7 @@ class Home extends Component {
 
         <Parallax
           pic="https://www.lifeinbalanceservices.com/wp-content/uploads/2015/12/bright-leaves-fade.jpg"
-          height="150px"
+          height="125px"
         >
           <br />
           <br />
@@ -20,13 +21,30 @@ class Home extends Component {
             <strong>Browning's Soap</strong>
           </h1>
           <br />
-          <h2>With natural beauty oils</h2>
+          <h2>Made with natural beauty oils</h2>
           <br />
           <h3>
             <i>On sale for a limited time!</i>
           </h3>
           <br />
-          <button>Order now!</button>
+          <i>Sign up to start shopping and to receive amazing deals!</i>
+          <br />
+          <Link
+            to="/register"
+            className={
+              window.location.pathname === "/register"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            <button
+              className="btn btn-dark my-2 my-sm-0"
+              href="/register"
+              type="submit"
+            >
+              Create Account
+            </button>
+          </Link>
         </Parallax>
 
         <div className="homecontainer">

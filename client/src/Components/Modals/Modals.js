@@ -11,8 +11,7 @@ const Modal = ({ handleClose, show, children }) => {
         <ul className="list-inline">
           <li className="list-inline-item">
         <button
-          className="btn btn-primary my-2 my-sm-0"
-          href="/cart"
+          className="btn btn-secondary my-2 my-sm-0"
           type="submit"
           onClick={handleClose}
         >
@@ -29,7 +28,7 @@ const Modal = ({ handleClose, show, children }) => {
           }
         >
           <button
-            className="btn btn-primary my-2 my-sm-0"
+            className="btn btn-secondary my-2 my-sm-0"
             href="/cart"
             type="submit"
           >
