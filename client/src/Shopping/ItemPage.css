@@ -45,7 +45,7 @@ button.Item-addToCart{
     display: none;
   }
 
-  .ParallaxHead{
+h1.ParallaxHead{
     font-family: 'Alike', serif;
     font-size: 36px;
     font: white;
