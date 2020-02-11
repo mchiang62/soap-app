@@ -10,7 +10,6 @@ function Footer() {
     <div className="card footer">
       <div className="card-body">
         <h4 className="card-title footerH"><strong>Browning's Soap</strong></h4>
-        <br />
         <p className="card-text footerP">
           Thank you for visiting! Check back weekly for new scents!
           <br />

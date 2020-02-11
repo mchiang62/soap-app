@@ -73,7 +73,7 @@ class ItemPage extends React.Component {
           <div className="row">
             <Modal show={this.state.show} handleClose={this.hideModal}>
               <br />
-              <h4>Added to Cart</h4>
+              <h4><strong>Added to Cart</strong></h4>
               <br />
             </Modal>
 
