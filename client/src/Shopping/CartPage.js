@@ -48,7 +48,14 @@ class CartPage extends React.Component {
           </h2>
           <br></br>
           <div className="checkoutButton">
-            <Link to="/cart" className={window.location.pathname === "/cart"}>
+            <Link
+              to="/cart"
+              className={
+                window.location.pathname === "/cart"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
               <button
                 className="btn btn-primary my-2 my-sm-0"
                 href="/cart"
@@ -59,7 +66,11 @@ class CartPage extends React.Component {
             </Link>
             <Link
               to="/products"
-              className={window.location.pathname === "/products"}
+              className={
+                window.location.pathname === "/products"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
             >
               <button
                 className="btn btn-primary my-2 my-sm-0"
