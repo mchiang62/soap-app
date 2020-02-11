@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import HomeCards from "../Components/HomeCards/HomeCards";
 import Footer from "../Components/Footer/Footer";
 import Parallax from "../Components/Parallax/Parallax";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
@@ -12,7 +13,7 @@ class Home extends Component {
 
         <Parallax
           pic="https://www.lifeinbalanceservices.com/wp-content/uploads/2015/12/bright-leaves-fade.jpg"
-          height="150px"
+          height="125px"
         >
           <br />
           <br />
@@ -20,21 +21,38 @@ class Home extends Component {
             <strong>Browning's Soap</strong>
           </h1>
           <br />
-          <h2>With natural beauty oils</h2>
+          <h2>Made with natural beauty oils</h2>
           <br />
           <h3>
             <i>On sale for a limited time!</i>
           </h3>
           <br />
-          <button>Order now!</button>
+          <i>Sign up to start shopping and to receive amazing deals!</i>
+          <br />
+          <Link
+            to="/register"
+            className={
+              window.location.pathname === "/register"
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            <button
+              className="btn btn-dark my-2 my-sm-0"
+              href="/register"
+              type="submit"
+            >
+              Create Account
+            </button>
+          </Link>
         </Parallax>
 
         <div className="homecontainer">
           <HomeCards
-            header="Made with natural ingredients"
+            header="All natural soaps made with saponified coconut oil and olive oil, essential or fragrance oils, and natural colorants "
             soapURL="https://live.staticflickr.com/65535/49439060548_2e9b890f50_b.jpg"
           />
-
+          <br />
           <Parallax
             pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
             height="400px"
@@ -44,18 +62,26 @@ class Home extends Component {
             <div className="col-6">
               <br />
               <br />
+              <br />
               <img
-                src="https://live.staticflickr.com/65535/49439060548_2e9b890f50_b.jpg"
+                src="https://live.staticflickr.com/65535/49439060678_6f96ebb95b.jpg"
                 alt="barsoaps"
-                height="300"
-                width="400"
+                height="450"
+                width="375"
               />
             </div>
             <div className="col-4">
               <br />
               <br />
-              <h1>description</h1>
               <br />
+              <h2>100% handmade using natural ingredients that leaves your skin gentle and healthy</h2>
+              <br />
+              <img
+                src="https://live.staticflickr.com/65535/49439757797_e4785320f0_b.jpg"
+                alt="barsoaps"
+                height="350"
+                width="325"
+              />
             </div>
           </div>
 
@@ -70,7 +96,7 @@ class Home extends Component {
           />
 
           <Parallax
-            pic="https://www.tokkoro.com/picsup/3034494-almost-spring_blown-out_faded_flower.jpg"
+            pic="https://www.sorellahealthandbeauty.com/wp-content/uploads/2017/07/Testimonial-Section-Faded.png"
             height="400px"
           />
         </div>

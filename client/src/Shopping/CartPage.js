@@ -60,7 +60,14 @@ removeItem = item =>{
           </h2>
           <br></br>
           <div className="checkoutButton">
-            <Link to="/cart" className={window.location.pathname === "/cart"}>
+            <Link
+              to="/cart"
+              className={
+                window.location.pathname === "/cart"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
               <button
                 className="btn btn-dark my-2 my-sm-0"
                 href="/cart"
@@ -70,7 +77,12 @@ removeItem = item =>{
             </Link>
             <Link
               to="/products"
-              className={window.location.pathname === "/products"}>
+              className={
+                window.location.pathname === "/products"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
               <button
                 className="btn btn-dark my-2 my-sm-0"
                 href="/cart"

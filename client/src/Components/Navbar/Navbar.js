@@ -86,18 +86,36 @@ function Navbar() {
           <li className="list-inline-item">
             <Link
               to="/register"
-              className={window.location.pathname === "register"}
+              className={
+                window.location.pathname === "register"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
             >
               Register
             </Link>
           </li>
           <li className="list-inline-item">
-            <Link to="/login" className={window.location.pathname === "/login"}>
+            <Link
+              to="/login"
+              className={
+                window.location.pathname === "/login"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
               Login
             </Link>
           </li>
           <li className="list-inline-item">
-            <Link to="/cart" className={window.location.pathname === "/cart"}>
+            <Link
+              to="/cart"
+              className={
+                window.location.pathname === "/cart"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
               <FontAwesomeIcon
                 className="add-classnames-like-this"
                 icon={faShoppingCart}

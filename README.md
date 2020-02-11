@@ -63,7 +63,7 @@ This app is currently deployed to Heroku on the URL: "https://brownings-soap.her
 
 * **Ashley Clark** - *Products page, shopping cart, styling* - [Ashley Clark](https://github.com/dashley06)
 
-* **Melissa Chiang** - *Home page, user interface, styling, general design* - [Melissa Chiang](https://github.com/mchiang62)
+* **Melissa Chiang** - *Home page, react router, styling, general UI design* - [Melissa Chiang](https://github.com/mchiang62)
 
 * **Ed Dean** - *User work/authentication, Passport, carried the team* - [Ed Dean](https://github.com/edean78)
 
