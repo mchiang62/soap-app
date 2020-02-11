@@ -46,9 +46,9 @@ button.Item-addToCart{
   }
 
 h1.ParallaxHead{
-    font-family: 'Alike', serif;
+    /* font-family: 'Alike', serif; */
     font-size: 36px;
-    font: white;
+    /* font: white; */
   }
 
   .Item-remove{

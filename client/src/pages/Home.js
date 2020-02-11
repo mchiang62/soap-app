@@ -91,7 +91,7 @@ class Home extends Component {
           />
 
           <HomeCards
-            header="made with these oils"
+            header="Artisan quality soap made with the finest ingredients, right in Atlanta's backyard.  A little bit of Southern Hospitality, from our home to yours"
             soapURL="https://live.staticflickr.com/65535/49439532561_201cf71c12_b.jpg"
           />
 
